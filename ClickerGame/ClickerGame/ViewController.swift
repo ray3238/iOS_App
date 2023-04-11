@@ -19,4 +19,5 @@ class ViewController: UIViewController {
     }
     @IBAction func clickedPlusButton(_ sender: UIButton) {
         count.text = String(Int(count.text!)! + 1)
-    }}
+    }
+}
