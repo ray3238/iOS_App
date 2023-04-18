@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     var typeNum : Int = 0
     var firstNumber : Double = 0
     var secondNumber : Double = 0
+    @IBOutlet weak var number1: UILabel!
     @IBOutlet weak var number: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         case 3...6:
             typeNum = sender.tag
             firstNumber = Double(number.text!)!
+            number1.text = number.text
             number.text = "0"
         case 1:
             number.text = String(Int(number.text!)! * -1)
@@ -34,7 +36,7 @@ class ViewController: UIViewController {
             number.text = String(firstNumber * 0.01)
         case 7:
             secondNumber = Double(number.text!)!
-            
+            number1.text = "0"
             switch typeNum{
             case 6:
                 number.text = removePoint(num: firstNumber + secondNumber)
