@@ -46,8 +46,7 @@ class ViewController: UIViewController {
                 number.text = removePoint(num: firstNumber * secondNumber)
             case 3:
                 number.text = removePoint(num: firstNumber / secondNumber)
-            default:
-                break
+            default: break
             }
         default: break
         }
