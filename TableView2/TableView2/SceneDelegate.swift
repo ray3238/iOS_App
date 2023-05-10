@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  ReviewCalculator
+//  TableView2
 //
-//  Created by 이태규 on 2023/04/18.
+//  Created by 이태규 on 2023/05/02.
 //
 
 import UIKit

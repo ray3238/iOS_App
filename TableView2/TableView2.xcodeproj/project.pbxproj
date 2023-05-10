@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F36370A29EECB98000850DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36370929EECB98000850DC /* AppDelegate.swift */; };
-		4F36370C29EECB98000850DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36370B29EECB98000850DC /* SceneDelegate.swift */; };
-		4F36370E29EECB98000850DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36370D29EECB98000850DC /* ViewController.swift */; };
-		4F36371129EECB98000850DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F36370F29EECB98000850DC /* Main.storyboard */; };
-		4F36371429EECB98000850DC /* ReviewCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F36371229EECB98000850DC /* ReviewCalculator.xcdatamodeld */; };
-		4F36371629EECB99000850DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F36371529EECB99000850DC /* Assets.xcassets */; };
-		4F36371929EECB99000850DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F36371729EECB99000850DC /* LaunchScreen.storyboard */; };
+		4FD1A9B22A010DD20036DA69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1A9B12A010DD20036DA69 /* AppDelegate.swift */; };
+		4FD1A9B42A010DD20036DA69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1A9B32A010DD20036DA69 /* SceneDelegate.swift */; };
+		4FD1A9B62A010DD20036DA69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1A9B52A010DD20036DA69 /* ViewController.swift */; };
+		4FD1A9B92A010DD20036DA69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1A9B72A010DD20036DA69 /* Main.storyboard */; };
+		4FD1A9BC2A010DD20036DA69 /* TableView2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1A9BA2A010DD20036DA69 /* TableView2.xcdatamodeld */; };
+		4FD1A9C12A010DD30036DA69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1A9BF2A010DD30036DA69 /* LaunchScreen.storyboard */; };
+		4FD1A9C92A014BBE0036DA69 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1A9C82A014BBE0036DA69 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F36370629EECB98000850DC /* ReviewCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReviewCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F36370929EECB98000850DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F36370B29EECB98000850DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F36370D29EECB98000850DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4F36371029EECB98000850DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4F36371329EECB98000850DC /* ReviewCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReviewCalculator.xcdatamodel; sourceTree = "<group>"; };
-		4F36371529EECB99000850DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F36371829EECB99000850DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4F36371A29EECB99000850DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD1A9AE2A010DD20036DA69 /* TableView2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD1A9B12A010DD20036DA69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4FD1A9B32A010DD20036DA69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4FD1A9B52A010DD20036DA69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FD1A9B82A010DD20036DA69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4FD1A9BB2A010DD20036DA69 /* TableView2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TableView2.xcdatamodel; sourceTree = "<group>"; };
+		4FD1A9C02A010DD30036DA69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4FD1A9C22A010DD30036DA69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD1A9C82A014BBE0036DA69 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F36370329EECB98000850DC /* Frameworks */ = {
+		4FD1A9AB2A010DD20036DA69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F3636FD29EECB98000850DC = {
+		4FD1A9A52A010DD20036DA69 = {
 			isa = PBXGroup;
 			children = (
-				4F36370829EECB98000850DC /* ReviewCalculator */,
-				4F36370729EECB98000850DC /* Products */,
+				4FD1A9B02A010DD20036DA69 /* TableView2 */,
+				4FD1A9AF2A010DD20036DA69 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F36370729EECB98000850DC /* Products */ = {
+		4FD1A9AF2A010DD20036DA69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F36370629EECB98000850DC /* ReviewCalculator.app */,
+				4FD1A9AE2A010DD20036DA69 /* TableView2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F36370829EECB98000850DC /* ReviewCalculator */ = {
+		4FD1A9B02A010DD20036DA69 /* TableView2 */ = {
 			isa = PBXGroup;
 			children = (
-				4F36370929EECB98000850DC /* AppDelegate.swift */,
-				4F36370B29EECB98000850DC /* SceneDelegate.swift */,
-				4F36370D29EECB98000850DC /* ViewController.swift */,
-				4F36370F29EECB98000850DC /* Main.storyboard */,
-				4F36371529EECB99000850DC /* Assets.xcassets */,
-				4F36371729EECB99000850DC /* LaunchScreen.storyboard */,
-				4F36371A29EECB99000850DC /* Info.plist */,
-				4F36371229EECB98000850DC /* ReviewCalculator.xcdatamodeld */,
+				4FD1A9C82A014BBE0036DA69 /* CustomCell.swift */,
+				4FD1A9B12A010DD20036DA69 /* AppDelegate.swift */,
+				4FD1A9B32A010DD20036DA69 /* SceneDelegate.swift */,
+				4FD1A9B52A010DD20036DA69 /* ViewController.swift */,
+				4FD1A9B72A010DD20036DA69 /* Main.storyboard */,
+				4FD1A9BF2A010DD30036DA69 /* LaunchScreen.storyboard */,
+				4FD1A9C22A010DD30036DA69 /* Info.plist */,
+				4FD1A9BA2A010DD20036DA69 /* TableView2.xcdatamodeld */,
 			);
-			path = ReviewCalculator;
+			path = TableView2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F36370529EECB98000850DC /* ReviewCalculator */ = {
+		4FD1A9AD2A010DD20036DA69 /* TableView2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F36371D29EECB99000850DC /* Build configuration list for PBXNativeTarget "ReviewCalculator" */;
+			buildConfigurationList = 4FD1A9C52A010DD30036DA69 /* Build configuration list for PBXNativeTarget "TableView2" */;
 			buildPhases = (
-				4F36370229EECB98000850DC /* Sources */,
-				4F36370329EECB98000850DC /* Frameworks */,
-				4F36370429EECB98000850DC /* Resources */,
+				4FD1A9AA2A010DD20036DA69 /* Sources */,
+				4FD1A9AB2A010DD20036DA69 /* Frameworks */,
+				4FD1A9AC2A010DD20036DA69 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ReviewCalculator;
-			productName = ReviewCalculator;
-			productReference = 4F36370629EECB98000850DC /* ReviewCalculator.app */;
+			name = TableView2;
+			productName = TableView2;
+			productReference = 4FD1A9AE2A010DD20036DA69 /* TableView2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F3636FE29EECB98000850DC /* Project object */ = {
+		4FD1A9A62A010DD20036DA69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					4F36370529EECB98000850DC = {
+					4FD1A9AD2A010DD20036DA69 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = 4F36370129EECB98000850DC /* Build configuration list for PBXProject "ReviewCalculator" */;
+			buildConfigurationList = 4FD1A9A92A010DD20036DA69 /* Build configuration list for PBXProject "TableView2" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 4F3636FD29EECB98000850DC;
-			productRefGroup = 4F36370729EECB98000850DC /* Products */;
+			mainGroup = 4FD1A9A52A010DD20036DA69;
+			productRefGroup = 4FD1A9AF2A010DD20036DA69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F36370529EECB98000850DC /* ReviewCalculator */,
+				4FD1A9AD2A010DD20036DA69 /* TableView2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F36370429EECB98000850DC /* Resources */ = {
+		4FD1A9AC2A010DD20036DA69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F36371929EECB99000850DC /* LaunchScreen.storyboard in Resources */,
-				4F36371629EECB99000850DC /* Assets.xcassets in Resources */,
-				4F36371129EECB98000850DC /* Main.storyboard in Resources */,
+				4FD1A9C12A010DD30036DA69 /* LaunchScreen.storyboard in Resources */,
+				4FD1A9B92A010DD20036DA69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F36370229EECB98000850DC /* Sources */ = {
+		4FD1A9AA2A010DD20036DA69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F36370E29EECB98000850DC /* ViewController.swift in Sources */,
-				4F36371429EECB98000850DC /* ReviewCalculator.xcdatamodeld in Sources */,
-				4F36370A29EECB98000850DC /* AppDelegate.swift in Sources */,
-				4F36370C29EECB98000850DC /* SceneDelegate.swift in Sources */,
+				4FD1A9BC2A010DD20036DA69 /* TableView2.xcdatamodeld in Sources */,
+				4FD1A9B62A010DD20036DA69 /* ViewController.swift in Sources */,
+				4FD1A9C92A014BBE0036DA69 /* CustomCell.swift in Sources */,
+				4FD1A9B22A010DD20036DA69 /* AppDelegate.swift in Sources */,
+				4FD1A9B42A010DD20036DA69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F36370F29EECB98000850DC /* Main.storyboard */ = {
+		4FD1A9B72A010DD20036DA69 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4F36371029EECB98000850DC /* Base */,
+				4FD1A9B82A010DD20036DA69 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4F36371729EECB99000850DC /* LaunchScreen.storyboard */ = {
+		4FD1A9BF2A010DD30036DA69 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4F36371829EECB99000850DC /* Base */,
+				4FD1A9C02A010DD30036DA69 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4F36371B29EECB99000850DC /* Debug */ = {
+		4FD1A9C32A010DD30036DA69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		4F36371C29EECB99000850DC /* Release */ = {
+		4FD1A9C42A010DD30036DA69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,7 +284,7 @@
 			};
 			name = Release;
 		};
-		4F36371E29EECB99000850DC /* Debug */ = {
+		4FD1A9C62A010DD30036DA69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -292,7 +292,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ReviewCalculator/Info.plist;
+				INFOPLIST_FILE = TableView2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -303,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = aa.ReviewCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = aa.TableView2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -311,7 +311,7 @@
 			};
 			name = Debug;
 		};
-		4F36371F29EECB99000850DC /* Release */ = {
+		4FD1A9C72A010DD30036DA69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -319,7 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ReviewCalculator/Info.plist;
+				INFOPLIST_FILE = TableView2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +330,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = aa.ReviewCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = aa.TableView2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -341,20 +341,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F36370129EECB98000850DC /* Build configuration list for PBXProject "ReviewCalculator" */ = {
+		4FD1A9A92A010DD20036DA69 /* Build configuration list for PBXProject "TableView2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F36371B29EECB99000850DC /* Debug */,
-				4F36371C29EECB99000850DC /* Release */,
+				4FD1A9C32A010DD30036DA69 /* Debug */,
+				4FD1A9C42A010DD30036DA69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F36371D29EECB99000850DC /* Build configuration list for PBXNativeTarget "ReviewCalculator" */ = {
+		4FD1A9C52A010DD30036DA69 /* Build configuration list for PBXNativeTarget "TableView2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F36371E29EECB99000850DC /* Debug */,
-				4F36371F29EECB99000850DC /* Release */,
+				4FD1A9C62A010DD30036DA69 /* Debug */,
+				4FD1A9C72A010DD30036DA69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -362,17 +362,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4F36371229EECB98000850DC /* ReviewCalculator.xcdatamodeld */ = {
+		4FD1A9BA2A010DD20036DA69 /* TableView2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4F36371329EECB98000850DC /* ReviewCalculator.xcdatamodel */,
+				4FD1A9BB2A010DD20036DA69 /* TableView2.xcdatamodel */,
 			);
-			currentVersion = 4F36371329EECB98000850DC /* ReviewCalculator.xcdatamodel */;
-			path = ReviewCalculator.xcdatamodeld;
+			currentVersion = 4FD1A9BB2A010DD20036DA69 /* TableView2.xcdatamodel */;
+			path = TableView2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 4F3636FE29EECB98000850DC /* Project object */;
+	rootObject = 4FD1A9A62A010DD20036DA69 /* Project object */;
 }
