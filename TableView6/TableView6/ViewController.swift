@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
 
     let cellName: String = "CustomCell"
     let cellLabel: [String] = ["첫 번째", "두 번째", "세 번째"]
@@ -19,6 +19,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.delegate = self
     }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -31,6 +34,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return CustomCell
     }
-
 }
-

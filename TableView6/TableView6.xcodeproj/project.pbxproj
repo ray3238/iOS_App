@@ -15,6 +15,7 @@
 		4FB3EEDD2A0B1033008C64D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB3EEDC2A0B1033008C64D7 /* Assets.xcassets */; };
 		4FB3EEE02A0B1033008C64D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FB3EEDE2A0B1033008C64D7 /* LaunchScreen.storyboard */; };
 		4FB3EEE82A0B1137008C64D7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3EEE72A0B1137008C64D7 /* CustomCell.swift */; };
+		4FB3EF112A13725E008C64D7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3EF102A13725E008C64D7 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4FB3EEDF2A0B1033008C64D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FB3EEE12A0B1033008C64D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FB3EEE72A0B1137008C64D7 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		4FB3EF102A13725E008C64D7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				4FB3EED22A0B1032008C64D7 /* SceneDelegate.swift */,
 				4FB3EED42A0B1032008C64D7 /* ViewController.swift */,
 				4FB3EEE72A0B1137008C64D7 /* CustomCell.swift */,
+				4FB3EF102A13725E008C64D7 /* TabBarController.swift */,
 				4FB3EED62A0B1032008C64D7 /* Main.storyboard */,
 				4FB3EEDC2A0B1033008C64D7 /* Assets.xcassets */,
 				4FB3EEDE2A0B1033008C64D7 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				4FB3EEDB2A0B1032008C64D7 /* TableView6.xcdatamodeld in Sources */,
 				4FB3EED52A0B1032008C64D7 /* ViewController.swift in Sources */,
 				4FB3EEE82A0B1137008C64D7 /* CustomCell.swift in Sources */,
+				4FB3EF112A13725E008C64D7 /* TabBarController.swift in Sources */,
 				4FB3EED12A0B1032008C64D7 /* AppDelegate.swift in Sources */,
 				4FB3EED32A0B1032008C64D7 /* SceneDelegate.swift in Sources */,
 			);

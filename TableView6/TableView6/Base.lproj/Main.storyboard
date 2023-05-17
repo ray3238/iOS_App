@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7kj-xC-4UH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MHv-JZ-124">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046.5648854961833" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-1263" y="2097"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1VE-FL-ckU">
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6p-8P-7bS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1834.3511450381679" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-1828" y="2761"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="v05-D7-cP4">
@@ -133,13 +133,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QA5-Dc-qNR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2595" y="4"/>
+            <point key="canvasLocation" x="-825" y="2761"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Hi-->
         <scene sceneID="dHO-51-vod">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7kj-xC-4UH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hi" image="trash" catalog="system" id="Ozx-Fm-tdx"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="EG3-7G-b0d"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bOx-ae-Gxe">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -151,12 +153,91 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgX-a3-T7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119.84732824427481" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-1268" y="1356"/>
+        </scene>
+        <!--Home -->
+        <scene sceneID="LdU-ZH-8Sj">
+            <objects>
+                <viewController id="yrd-MH-waI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XGV-SW-YKe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3p8-Gx-QNX"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home " image="house" catalog="system" id="PKW-85-BRz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1E-ca-mcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="1410"/>
+        </scene>
+        <!--Bye-->
+        <scene sceneID="G8C-DM-WkI">
+            <objects>
+                <viewController id="rpn-gM-RsM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PPk-CT-u2A">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="18L-OH-Eus"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bye" image="folder" catalog="system" id="lwv-vO-jXx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6J-cF-vZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="1423"/>
+        </scene>
+        <!--iOS-->
+        <scene sceneID="dbc-2X-ljS">
+            <objects>
+                <viewController id="Som-Ig-em8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uN1-Wc-RL1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I8C-y1-XF8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="iOS" image="apple.logo" catalog="system" id="kZX-rY-kfO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Og2-bI-uLK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="1423"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Vjq-RW-CYh">
+            <objects>
+                <tabBarController id="MHv-JZ-124" customClass="TabBarController" customModule="TableView6" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FCe-1Z-S8e">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7kj-xC-4UH" kind="show" id="KcD-Ao-7E4"/>
+                        <segue destination="7kj-xC-4UH" kind="relationship" relationship="viewControllers" id="1Im-Zp-qda"/>
+                        <segue destination="yrd-MH-waI" kind="relationship" relationship="viewControllers" id="zut-Wk-nXF"/>
+                        <segue destination="rpn-gM-RsM" kind="relationship" relationship="viewControllers" id="dCh-eH-2vA"/>
+                        <segue destination="Som-Ig-em8" kind="relationship" relationship="viewControllers" id="gaa-6Q-bWo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgz-L8-I7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="630"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Im-Zp-qda"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="apple.logo" catalog="system" width="105" height="128"/>
+        <image name="folder" catalog="system" width="128" height="96"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
