@@ -1,0 +1,6 @@
+framework module Pods_Everytime {
+  umbrella header "Pods-Everytime-umbrella.h"
+
+  export *
+  module * { export * }
+}

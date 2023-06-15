@@ -42,6 +42,7 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
         
         customCell.titleLabel.text = todoList[indexPath.row].title
         customCell.contentLabel.text = todoList[indexPath.row].content
+        
         return customCell
     }
     

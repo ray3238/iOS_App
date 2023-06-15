@@ -19,15 +19,23 @@ class InputViewController: UIViewController {
     
     @IBAction func plusButton(_ sender: UIButton) {
             
-            if contentTextView.text!.isEmpty || titleTextField.text!.isEmpty {
-                        let titleError = UIAlertController(title: "오, 이런! 제목을 입력하지 않으셨습니다!", message: "제목을 입력해주세요!", preferredStyle: UIAlertController.Style.alert)
+            if titleTextField.text!.isEmpty {
+                        let titleError = UIAlertController(title: "오, 이런! 제목을 입력하지 않으셨습니다!", message: "제목을 입력해 주세요!", preferredStyle: UIAlertController.Style.alert)
                         
                 present(titleError, animated: false, completion: nil)
                 
                 let confirm = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil)
                 
                             titleError.addAction(confirm)
-            } else {
+            } else if contentTextView.text!.isEmpty {
+                let titleError = UIAlertController(title: "오, 이런! 내용을 입력하지 않으셨습니다!", message: "내용을 입력해 주세요!", preferredStyle: UIAlertController.Style.alert)
+                
+        present(titleError, animated: false, completion: nil)
+        
+        let confirm = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil)
+        
+                    titleError.addAction(confirm)
+    } else {
                 todoList.append(TodoList(title: titleTextField.text!, content: contentTextView.text!))
                 self.navigationController?.popViewController(animated: true)
             }

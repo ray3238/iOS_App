@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C6272C3A-CE11-4A77-82F8-1C709B8F60CC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6037041-27A4-46EE-BB1B-4996E89A1710"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KakaoTalk/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C6037041-27A4-46EE-BB1B-4996E89A1710 - b30c34e2f22cd097"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KakaoTalk.ViewController.tableView.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "KakaoTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leetaegyu/Desktop/Git/iOS_App/KakaoTalk/KakaoTalk/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "C6037041-27A4-46EE-BB1B-4996E89A1710 - 4e2939e778cae76b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KakaoTalk.ViewController.tableView.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "KakaoTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leetaegyu/Desktop/Git/iOS_App/KakaoTalk/KakaoTalk/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "C6037041-27A4-46EE-BB1B-4996E89A1710 - c0a63269d880559a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KakaoTalk.ViewController.tableView.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "KakaoTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leetaegyu/Desktop/Git/iOS_App/KakaoTalk/KakaoTalk/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "C6037041-27A4-46EE-BB1B-4996E89A1710 - 67fb8a280a14d721"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KakaoTalk.ViewController.tableView.modify : Swift.Optional&lt;__C.UITableView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "KakaoTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leetaegyu/Desktop/Git/iOS_App/KakaoTalk/KakaoTalk/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "C6037041-27A4-46EE-BB1B-4996E89A1710 - cce2cb29235031b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KakaoTalk.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; KakaoTalk.ViewController"
+                  moduleName = "KakaoTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leetaegyu/Desktop/Git/iOS_App/KakaoTalk/KakaoTalk/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "C6037041-27A4-46EE-BB1B-4996E89A1710 - f8d7c7df2a0bb077"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KakaoTalk.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;KakaoTalk.ViewController&gt;"
+                  moduleName = "KakaoTalk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leetaegyu/Desktop/Git/iOS_App/KakaoTalk/KakaoTalk/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

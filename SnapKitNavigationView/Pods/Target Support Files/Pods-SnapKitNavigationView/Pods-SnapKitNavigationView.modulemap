@@ -1,0 +1,6 @@
+framework module Pods_SnapKitNavigationView {
+  umbrella header "Pods-SnapKitNavigationView-umbrella.h"
+
+  export *
+  module * { export * }
+}
