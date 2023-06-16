@@ -1,23 +1,7 @@
-func swap<T>(_ a: inout T, _ b: inout T) {
-    let temp = a
-    a = b
-    b = temp
-}
+var s1: [String] = ["a", "b", "c"]
+var s2: [String] = ["com", "b", "d", "p", "c"]
 
-var aInt = 3
-var bInt = 5
+var s3: Int = 0
 
-print(aInt, bInt)
+s3 = s1.filter { $0.contains(s2) }.count
 
-swap(&aInt, &bInt)
-
-print(aInt, bInt)
-
-var aString = "3"
-var bString = "5"
-
-print(aString, bString)
-
-swap(&aString, &bString)
-
-print(aString, bString)

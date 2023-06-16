@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 100
+        tableView.estimatedSectionHeaderHeight = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
