@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F576D922A3C45D8006D04F4 /* inPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F576D912A3C45D8006D04F4 /* inPostViewController.swift */; };
+		4F896ECB2A3DEC9A00814C54 /* MyBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ECA2A3DEC9A00814C54 /* MyBucketListViewController.swift */; };
+		4F896ECD2A3DECEC00814C54 /* NewContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */; };
+		4F896ECF2A3DED6100814C54 /* FreedomContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ECE2A3DED6100814C54 /* FreedomContentViewController.swift */; };
+		4F896ED12A3DED8000814C54 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED02A3DED8000814C54 /* MyPageViewController.swift */; };
+		4F896ED52A3DEE6800814C54 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED42A3DEE6800814C54 /* SigninViewController.swift */; };
+		4F896ED72A3DEE8F00814C54 /* JoininViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED62A3DEE8F00814C54 /* JoininViewController.swift */; };
+		4F896ED92A3DEEB100814C54 /* JoininJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED82A3DEEB100814C54 /* JoininJobViewController.swift */; };
+		4F896EDB2A3DEEDC00814C54 /* WhyBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896EDA2A3DEEDC00814C54 /* WhyBucketListViewController.swift */; };
 		4FBFD8852A3C22D3006A0101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFD8842A3C22D3006A0101 /* AppDelegate.swift */; };
 		4FBFD8872A3C22D3006A0101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFD8862A3C22D3006A0101 /* SceneDelegate.swift */; };
 		4FBFD8892A3C22D3006A0101 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFD8882A3C22D3006A0101 /* MainViewController.swift */; };
@@ -18,6 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F576D912A3C45D8006D04F4 /* inPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inPostViewController.swift; sourceTree = "<group>"; };
+		4F896ECA2A3DEC9A00814C54 /* MyBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListViewController.swift; sourceTree = "<group>"; };
+		4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContentViewController.swift; sourceTree = "<group>"; };
+		4F896ECE2A3DED6100814C54 /* FreedomContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreedomContentViewController.swift; sourceTree = "<group>"; };
+		4F896ED02A3DED8000814C54 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		4F896ED42A3DEE6800814C54 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		4F896ED62A3DEE8F00814C54 /* JoininViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoininViewController.swift; sourceTree = "<group>"; };
+		4F896ED82A3DEEB100814C54 /* JoininJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoininJobViewController.swift; sourceTree = "<group>"; };
+		4F896EDA2A3DEEDC00814C54 /* WhyBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyBucketListViewController.swift; sourceTree = "<group>"; };
 		4FBFD8812A3C22D3006A0101 /* BucketListPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketListPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBFD8842A3C22D3006A0101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FBFD8862A3C22D3006A0101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F896ED22A3DED9F00814C54 /* TabbarView */ = {
+			isa = PBXGroup;
+			children = (
+				4FBFD8882A3C22D3006A0101 /* MainViewController.swift */,
+				4FBFD89B2A3C27A6006A0101 /* PostCustomCell.swift */,
+				4F576D912A3C45D8006D04F4 /* inPostViewController.swift */,
+				4F896ECA2A3DEC9A00814C54 /* MyBucketListViewController.swift */,
+				4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */,
+				4F896ECE2A3DED6100814C54 /* FreedomContentViewController.swift */,
+				4F896ED02A3DED8000814C54 /* MyPageViewController.swift */,
+			);
+			path = TabbarView;
+			sourceTree = "<group>";
+		};
 		4FBFD8782A3C22D3006A0101 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +92,13 @@
 		4FBFD8832A3C22D3006A0101 /* BucketListPost */ = {
 			isa = PBXGroup;
 			children = (
+				4F896ED22A3DED9F00814C54 /* TabbarView */,
 				4FBFD8842A3C22D3006A0101 /* AppDelegate.swift */,
 				4FBFD8862A3C22D3006A0101 /* SceneDelegate.swift */,
-				4FBFD8882A3C22D3006A0101 /* MainViewController.swift */,
-				4FBFD89B2A3C27A6006A0101 /* PostCustomCell.swift */,
+				4F896ED42A3DEE6800814C54 /* SigninViewController.swift */,
+				4F896ED62A3DEE8F00814C54 /* JoininViewController.swift */,
+				4F896ED82A3DEEB100814C54 /* JoininJobViewController.swift */,
+				4F896EDA2A3DEEDC00814C54 /* WhyBucketListViewController.swift */,
 				4FBFD88A2A3C22D3006A0101 /* Main.storyboard */,
 				4FBFD8902A3C22D4006A0101 /* Assets.xcassets */,
 				4FBFD8922A3C22D4006A0101 /* LaunchScreen.storyboard */,
@@ -145,10 +180,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FBFD8892A3C22D3006A0101 /* MainViewController.swift in Sources */,
+				4F576D922A3C45D8006D04F4 /* inPostViewController.swift in Sources */,
+				4F896ED52A3DEE6800814C54 /* SigninViewController.swift in Sources */,
+				4F896ECF2A3DED6100814C54 /* FreedomContentViewController.swift in Sources */,
 				4FBFD8852A3C22D3006A0101 /* AppDelegate.swift in Sources */,
 				4FBFD89C2A3C27A6006A0101 /* PostCustomCell.swift in Sources */,
+				4F896ED12A3DED8000814C54 /* MyPageViewController.swift in Sources */,
+				4F896EDB2A3DEEDC00814C54 /* WhyBucketListViewController.swift in Sources */,
+				4F896ED92A3DEEB100814C54 /* JoininJobViewController.swift in Sources */,
+				4F896ED72A3DEE8F00814C54 /* JoininViewController.swift in Sources */,
 				4FBFD8872A3C22D3006A0101 /* SceneDelegate.swift in Sources */,
+				4F896ECD2A3DECEC00814C54 /* NewContentViewController.swift in Sources */,
 				4FBFD88F2A3C22D3006A0101 /* BucketListPost.xcdatamodeld in Sources */,
+				4F896ECB2A3DEC9A00814C54 /* MyBucketListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

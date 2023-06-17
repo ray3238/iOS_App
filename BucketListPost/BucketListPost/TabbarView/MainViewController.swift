@@ -28,12 +28,17 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let PostCustomCell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! PostCustomCell
+        let postCustomCell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! PostCustomCell
         
-        PostCustomCell.testLabel.text = "안녕하세요"
+        postCustomCell.selectionStyle = .none
+        postCustomCell.profil_Image.image = UIImage(named: "Loopy")
+        postCustomCell.profil_Name.text = "이태규"
+        postCustomCell.profil_Job.text = "학생"
+        postCustomCell.postTitle.text = "제 버킷리스트는요.."
         
-        return PostCustomCell
+        postCustomCell.layer.borderWidth = 1
+        postCustomCell.layer.borderColor = UIColor.lightGray.cgColor
+        
+        return postCustomCell
     }
-    
-    
 }
