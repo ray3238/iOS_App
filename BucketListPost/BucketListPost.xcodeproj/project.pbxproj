@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F57661B2A3EA27A00D18175 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57661A2A3EA27A00D18175 /* TabBarController.swift */; };
 		4F576D922A3C45D8006D04F4 /* inPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F576D912A3C45D8006D04F4 /* inPostViewController.swift */; };
 		4F896ECB2A3DEC9A00814C54 /* MyBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ECA2A3DEC9A00814C54 /* MyBucketListViewController.swift */; };
 		4F896ECD2A3DECEC00814C54 /* NewContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */; };
 		4F896ECF2A3DED6100814C54 /* FreedomContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ECE2A3DED6100814C54 /* FreedomContentViewController.swift */; };
 		4F896ED12A3DED8000814C54 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED02A3DED8000814C54 /* MyPageViewController.swift */; };
 		4F896ED52A3DEE6800814C54 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED42A3DEE6800814C54 /* SigninViewController.swift */; };
-		4F896ED72A3DEE8F00814C54 /* JoininViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED62A3DEE8F00814C54 /* JoininViewController.swift */; };
-		4F896ED92A3DEEB100814C54 /* JoininJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED82A3DEEB100814C54 /* JoininJobViewController.swift */; };
+		4F896ED72A3DEE8F00814C54 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED62A3DEE8F00814C54 /* SignupViewController.swift */; };
+		4F896ED92A3DEEB100814C54 /* SignupJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ED82A3DEEB100814C54 /* SignupJobViewController.swift */; };
 		4F896EDB2A3DEEDC00814C54 /* WhyBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896EDA2A3DEEDC00814C54 /* WhyBucketListViewController.swift */; };
 		4FBFD8852A3C22D3006A0101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFD8842A3C22D3006A0101 /* AppDelegate.swift */; };
 		4FBFD8872A3C22D3006A0101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFD8862A3C22D3006A0101 /* SceneDelegate.swift */; };
@@ -24,17 +25,21 @@
 		4FBFD8912A3C22D4006A0101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFD8902A3C22D4006A0101 /* Assets.xcassets */; };
 		4FBFD8942A3C22D4006A0101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFD8922A3C22D4006A0101 /* LaunchScreen.storyboard */; };
 		4FBFD89C2A3C27A6006A0101 /* PostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFD89B2A3C27A6006A0101 /* PostCustomCell.swift */; };
+		4FF22A182A3F1D0000038937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FF22A172A3F1D0000038937 /* GoogleService-Info.plist */; };
+		586DD565FB6A3881849C8E32 /* Pods_BucketListPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD9F68CEC8B0C46C980BE60 /* Pods_BucketListPost.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CD9F68CEC8B0C46C980BE60 /* Pods_BucketListPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BucketListPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F57661A2A3EA27A00D18175 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4F576D912A3C45D8006D04F4 /* inPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inPostViewController.swift; sourceTree = "<group>"; };
 		4F896ECA2A3DEC9A00814C54 /* MyBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListViewController.swift; sourceTree = "<group>"; };
 		4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContentViewController.swift; sourceTree = "<group>"; };
 		4F896ECE2A3DED6100814C54 /* FreedomContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreedomContentViewController.swift; sourceTree = "<group>"; };
 		4F896ED02A3DED8000814C54 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		4F896ED42A3DEE6800814C54 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
-		4F896ED62A3DEE8F00814C54 /* JoininViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoininViewController.swift; sourceTree = "<group>"; };
-		4F896ED82A3DEEB100814C54 /* JoininJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoininJobViewController.swift; sourceTree = "<group>"; };
+		4F896ED62A3DEE8F00814C54 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		4F896ED82A3DEEB100814C54 /* SignupJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupJobViewController.swift; sourceTree = "<group>"; };
 		4F896EDA2A3DEEDC00814C54 /* WhyBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyBucketListViewController.swift; sourceTree = "<group>"; };
 		4FBFD8812A3C22D3006A0101 /* BucketListPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketListPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBFD8842A3C22D3006A0101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +51,9 @@
 		4FBFD8932A3C22D4006A0101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FBFD8952A3C22D4006A0101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FBFD89B2A3C27A6006A0101 /* PostCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomCell.swift; sourceTree = "<group>"; };
+		4FF22A172A3F1D0000038937 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B0CA3BD25637A6B6AA70C79 /* Pods-BucketListPost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketListPost.debug.xcconfig"; path = "Target Support Files/Pods-BucketListPost/Pods-BucketListPost.debug.xcconfig"; sourceTree = "<group>"; };
+		E8D6AF2517250E58EAB4035A /* Pods-BucketListPost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketListPost.release.xcconfig"; path = "Target Support Files/Pods-BucketListPost/Pods-BucketListPost.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +61,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586DD565FB6A3881849C8E32 /* Pods_BucketListPost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F896ED22A3DED9F00814C54 /* TabbarView */ = {
+		07D2C20EFA65CA4FE01330CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B0CA3BD25637A6B6AA70C79 /* Pods-BucketListPost.debug.xcconfig */,
+				E8D6AF2517250E58EAB4035A /* Pods-BucketListPost.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4F5F36942A3F2254008323D5 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
 				4FBFD8882A3C22D3006A0101 /* MainViewController.swift */,
@@ -69,8 +87,20 @@
 				4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */,
 				4F896ECE2A3DED6100814C54 /* FreedomContentViewController.swift */,
 				4F896ED02A3DED8000814C54 /* MyPageViewController.swift */,
+				4F57661A2A3EA27A00D18175 /* TabBarController.swift */,
 			);
-			path = TabbarView;
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		4F5F36952A3F2271008323D5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4F896ED42A3DEE6800814C54 /* SigninViewController.swift */,
+				4F896ED62A3DEE8F00814C54 /* SignupViewController.swift */,
+				4F896ED82A3DEEB100814C54 /* SignupJobViewController.swift */,
+				4F896EDA2A3DEEDC00814C54 /* WhyBucketListViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		4FBFD8782A3C22D3006A0101 = {
@@ -78,6 +108,8 @@
 			children = (
 				4FBFD8832A3C22D3006A0101 /* BucketListPost */,
 				4FBFD8822A3C22D3006A0101 /* Products */,
+				07D2C20EFA65CA4FE01330CB /* Pods */,
+				BC1D42284E1C765C12D3AA31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,13 +124,11 @@
 		4FBFD8832A3C22D3006A0101 /* BucketListPost */ = {
 			isa = PBXGroup;
 			children = (
-				4F896ED22A3DED9F00814C54 /* TabbarView */,
+				4F5F36942A3F2254008323D5 /* Tabbar */,
+				4F5F36952A3F2271008323D5 /* Login */,
 				4FBFD8842A3C22D3006A0101 /* AppDelegate.swift */,
 				4FBFD8862A3C22D3006A0101 /* SceneDelegate.swift */,
-				4F896ED42A3DEE6800814C54 /* SigninViewController.swift */,
-				4F896ED62A3DEE8F00814C54 /* JoininViewController.swift */,
-				4F896ED82A3DEEB100814C54 /* JoininJobViewController.swift */,
-				4F896EDA2A3DEEDC00814C54 /* WhyBucketListViewController.swift */,
+				4FF22A172A3F1D0000038937 /* GoogleService-Info.plist */,
 				4FBFD88A2A3C22D3006A0101 /* Main.storyboard */,
 				4FBFD8902A3C22D4006A0101 /* Assets.xcassets */,
 				4FBFD8922A3C22D4006A0101 /* LaunchScreen.storyboard */,
@@ -108,6 +138,14 @@
 			path = BucketListPost;
 			sourceTree = "<group>";
 		};
+		BC1D42284E1C765C12D3AA31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CD9F68CEC8B0C46C980BE60 /* Pods_BucketListPost.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FBFD8982A3C22D4006A0101 /* Build configuration list for PBXNativeTarget "BucketListPost" */;
 			buildPhases = (
+				793E13918CF42B9E718CDCA6 /* [CP] Check Pods Manifest.lock */,
 				4FBFD87D2A3C22D3006A0101 /* Sources */,
 				4FBFD87E2A3C22D3006A0101 /* Frameworks */,
 				4FBFD87F2A3C22D3006A0101 /* Resources */,
+				72CFA5515127D301E1C6D03C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 4FBFD8782A3C22D3006A0101;
+			packageReferences = (
+				4F7C81C12A3E994100BF3F41 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4FBFD8822A3C22D3006A0101 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FBFD8942A3C22D4006A0101 /* LaunchScreen.storyboard in Resources */,
+				4FF22A182A3F1D0000038937 /* GoogleService-Info.plist in Resources */,
 				4FBFD8912A3C22D4006A0101 /* Assets.xcassets in Resources */,
 				4FBFD88C2A3C22D3006A0101 /* Main.storyboard in Resources */,
 			);
@@ -174,11 +218,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		72CFA5515127D301E1C6D03C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BucketListPost/Pods-BucketListPost-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BucketListPost/Pods-BucketListPost-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BucketListPost/Pods-BucketListPost-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		793E13918CF42B9E718CDCA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BucketListPost-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FBFD87D2A3C22D3006A0101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F57661B2A3EA27A00D18175 /* TabBarController.swift in Sources */,
 				4FBFD8892A3C22D3006A0101 /* MainViewController.swift in Sources */,
 				4F576D922A3C45D8006D04F4 /* inPostViewController.swift in Sources */,
 				4F896ED52A3DEE6800814C54 /* SigninViewController.swift in Sources */,
@@ -187,8 +274,8 @@
 				4FBFD89C2A3C27A6006A0101 /* PostCustomCell.swift in Sources */,
 				4F896ED12A3DED8000814C54 /* MyPageViewController.swift in Sources */,
 				4F896EDB2A3DEEDC00814C54 /* WhyBucketListViewController.swift in Sources */,
-				4F896ED92A3DEEB100814C54 /* JoininJobViewController.swift in Sources */,
-				4F896ED72A3DEE8F00814C54 /* JoininViewController.swift in Sources */,
+				4F896ED92A3DEEB100814C54 /* SignupJobViewController.swift in Sources */,
+				4F896ED72A3DEE8F00814C54 /* SignupViewController.swift in Sources */,
 				4FBFD8872A3C22D3006A0101 /* SceneDelegate.swift in Sources */,
 				4F896ECD2A3DECEC00814C54 /* NewContentViewController.swift in Sources */,
 				4FBFD88F2A3C22D3006A0101 /* BucketListPost.xcdatamodeld in Sources */,
@@ -334,6 +421,7 @@
 		};
 		4FBFD8992A3C22D4006A0101 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B0CA3BD25637A6B6AA70C79 /* Pods-BucketListPost.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -351,7 +439,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = aa.BucketListPost;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aa.BucketListPost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -361,6 +449,7 @@
 		};
 		4FBFD89A2A3C22D4006A0101 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8D6AF2517250E58EAB4035A /* Pods-BucketListPost.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,7 +467,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = aa.BucketListPost;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aa.BucketListPost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -408,6 +497,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F7C81C12A3E994100BF3F41 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		4FBFD88D2A3C22D3006A0101 /* BucketListPost.xcdatamodeld */ = {

@@ -234,17 +234,26 @@
             </objects>
             <point key="canvasLocation" x="-2201" y="1230"/>
         </scene>
-        <!--자유 게시판-->
+        <!--알림-->
         <scene sceneID="PRR-JA-rE6">
             <objects>
                 <viewController id="nLn-dw-LQb" customClass="FreedomContentViewController" customModule="BucketListPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="he6-uO-NKT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여기 알람창 어떰?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THu-fP-buJ">
+                                <rect key="frame" x="136" y="367" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ph7-DD-Vj2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="자유 게시판" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="dWZ-lA-7GT"/>
+                    <tabBarItem key="tabBarItem" title="알림" image="bell" catalog="system" id="dWZ-lA-7GT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfz-WM-pkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -296,7 +305,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Omt-dX-1n6">
             <objects>
-                <tabBarController id="LAZ-Tl-tdz" sceneMemberID="viewController">
+                <tabBarController id="LAZ-Tl-tdz" customClass="TabBarController" customModule="BucketListPost" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="D2L-ap-M54"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UuS-ee-Nhy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -315,10 +324,10 @@
             </objects>
             <point key="canvasLocation" x="-3532" y="425"/>
         </scene>
-        <!--Joinin View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="Ump-jf-YuE">
             <objects>
-                <viewController id="0zv-ju-rVO" customClass="JoininViewController" customModule="BucketListPost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc2" id="0zv-ju-rVO" customClass="SignupViewController" customModule="BucketListPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GGV-ji-uQW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,12 +425,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iT4-K2-Rrq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6069" y="812"/>
+            <point key="canvasLocation" x="-7143" y="812"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup Job View Controller-->
         <scene sceneID="Q89-zJ-q5b">
             <objects>
-                <viewController id="iHj-Ux-qMb" sceneMemberID="viewController">
+                <viewController id="iHj-Ux-qMb" customClass="SignupJobViewController" customModule="BucketListPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L5e-DG-9Rl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -488,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mc5-d4-qAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5427" y="812"/>
+            <point key="canvasLocation" x="-6466" y="812"/>
         </scene>
         <!--나의 버킷리스트-->
         <scene sceneID="OOt-f3-yN2">
@@ -536,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTA-ut-flT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2079" y="149"/>
+            <point key="canvasLocation" x="-2456" y="425"/>
         </scene>
         <!--메인 홈-->
         <scene sceneID="gPU-V9-zPv">
@@ -655,7 +664,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="LAZ-Tl-tdz" kind="push" id="f1B-80-FCh"/>
+                                    <action selector="signinCleckedBtn:" destination="5Q4-AU-qhv" eventType="touchUpInside" id="AeI-Zy-V5Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJD-Kq-IDG">
@@ -706,10 +715,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="aiE-5b-3iu"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="idTextField" destination="Ndh-zs-YYs" id="iF0-2E-qNf"/>
+                        <outlet property="pwTextField" destination="1xK-fS-egL" id="LOA-UI-6wf"/>
+                        <outlet property="signinBtn" destination="OeV-Yp-kGa" id="8Ti-nG-e5f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KV4-3a-Wqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4995" y="7"/>
+            <point key="canvasLocation" x="-4556" y="87"/>
         </scene>
         <!--Why Bucket List View Controller-->
         <scene sceneID="ixL-GF-cYA">
@@ -742,7 +756,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="LAZ-Tl-tdz" kind="push" id="ABY-aC-I20"/>
+                                    <segue destination="5Q4-AU-qhv" kind="push" id="kRS-k5-vpi"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="F8m-05-Qix">
@@ -781,7 +795,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yq3-7J-xPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4782" y="812"/>
+            <point key="canvasLocation" x="-5796" y="812"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s4T-cQ-7eg">
@@ -802,20 +816,20 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2v-sL-Vhh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5763" y="7"/>
+            <point key="canvasLocation" x="-5640" y="87"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="f1B-80-FCh"/>
+        <segue reference="3Sk-1b-mm2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Loopy" width="360" height="360"/>
+        <image name="bell" catalog="system" width="125" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="r" width="128" height="128"/>
-        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
