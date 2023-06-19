@@ -17,7 +17,16 @@ class SignupViewController: UIViewController {
             if user !=  nil, self.pwTextField.text == self.ConfirmPwTextField.text{
                 self.ConfirmPwLabel.text = " "
                 print("register success")
+                
                 self.signupBtn.addTarget(self, action: #selector(self.did), for: .touchUpInside)
+                
+                guard let vc = self.storyboard?.instantiateViewController(identifier: "vc2") as? SignupJobViewController else {
+                            return
+                        }
+                        
+                vc.spidData1 = self.idTextField.text!
+                vc.sppwData1 = self.pwTextField.text!
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             else{
                 self.ConfirmPwLabel.text = "비밀번호가 일치하지 않습니다"
@@ -31,13 +40,14 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var pwTextField: UITextField!
     @IBOutlet weak var ConfirmPwTextField: UITextField!
     @IBOutlet weak var ConfirmPwLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     @objc func did() {
-        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "vc1") else { return
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "vc2") else { return
         }
         self.navigationController?.pushViewController(viewController, animated: true)
     }

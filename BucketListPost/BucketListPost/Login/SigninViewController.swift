@@ -12,7 +12,6 @@ import FirebaseAuth
 class SigninViewController: UIViewController {
     
     @IBAction func signinClickedBtn(_ sender: UIButton) {
-        
         Auth.auth().signIn(withEmail: idTextField.text!, password: pwTextField.text!) { (user, error) in
             
             if user != nil {
@@ -53,7 +52,7 @@ class SigninViewController: UIViewController {
     }
     
     @objc func did() {
-        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "vc2") else { return
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "vc1") else { return
         }
         self.navigationController?.pushViewController(viewController, animated: true)
     }

@@ -305,7 +305,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Omt-dX-1n6">
             <objects>
-                <tabBarController storyboardIdentifier="vc2" id="LAZ-Tl-tdz" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="vc1" id="LAZ-Tl-tdz" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="D2L-ap-M54"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UuS-ee-Nhy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -433,6 +433,7 @@
                     <connections>
                         <outlet property="ConfirmPwLabel" destination="pgk-zm-Hib" id="nuc-dH-1K4"/>
                         <outlet property="ConfirmPwTextField" destination="nOt-1M-Quj" id="znM-5m-cGZ"/>
+                        <outlet property="idLabel" destination="RMl-zF-5er" id="lqu-Tz-vsi"/>
                         <outlet property="idTextField" destination="VXT-gn-Zrx" id="xba-Cs-cBe"/>
                         <outlet property="pwTextField" destination="K7O-c0-umI" id="2am-0O-ek8"/>
                         <outlet property="signupBtn" destination="HyV-7w-Aft" id="Jef-Ui-u1v"/>
@@ -445,7 +446,7 @@
         <!--Signup Job View Controller-->
         <scene sceneID="Q89-zJ-q5b">
             <objects>
-                <viewController storyboardIdentifier="vc1" id="iHj-Ux-qMb" customClass="SignupJobViewController" customModule="BucketListPost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc2" id="iHj-Ux-qMb" customClass="SignupJobViewController" customModule="BucketListPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L5e-DG-9Rl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,9 +473,6 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="fs4-KH-az0" kind="push" id="STX-yW-CWC"/>
-                                </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="nrm-1j-6fJ">
                                 <rect key="frame" x="35" y="763" width="323" height="4"/>
@@ -509,6 +507,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zZ2-nf-9ae"/>
+                    <connections>
+                        <outlet property="signupBtn" destination="cPc-8u-PtA" id="v66-CY-1tc"/>
+                        <outlet property="signupJobLabel" destination="N3B-lx-X0t" id="c8a-eq-LjS"/>
+                        <outlet property="signupJobTextField" destination="KqL-UZ-EJi" id="TVt-YD-ZqU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mc5-d4-qAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -743,25 +746,25 @@
         <!--Why Bucket List View Controller-->
         <scene sceneID="ixL-GF-cYA">
             <objects>
-                <viewController id="fs4-KH-az0" customClass="WhyBucketListViewController" customModule="BucketListPost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc3" id="fs4-KH-az0" customClass="WhyBucketListViewController" customModule="BucketListPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ex3-9l-P3g">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocl-B6-XfV">
-                                <rect key="frame" x="140" y="80" width="113" height="48"/>
+                                <rect key="frame" x="140" y="139" width="113" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이 페이지에 기제될 부분입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fz1-FB-ti9">
-                                <rect key="frame" x="20" y="296" width="223" height="16"/>
+                                <rect key="frame" x="20" y="355" width="223" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" systemColor="systemGray3Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZS-Kv-uzW">
-                                <rect key="frame" x="20" y="629" width="343" height="35"/>
+                                <rect key="frame" x="20" y="688" width="343" height="35"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
@@ -775,10 +778,10 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="F8m-05-Qix">
-                                <rect key="frame" x="35" y="704" width="323" height="4"/>
+                                <rect key="frame" x="35" y="763" width="323" height="4"/>
                             </progressView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="버킷리스트를 작성하는 이유가 무엇인가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YxI-WK-7IQ">
-                                <rect key="frame" x="20" y="248" width="343" height="45"/>
+                                <rect key="frame" x="20" y="307" width="343" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="MGQ-a0-wfg"/>
                                 </constraints>
