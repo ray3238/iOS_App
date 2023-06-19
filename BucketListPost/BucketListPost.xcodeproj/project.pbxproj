@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F57661B2A3EA27A00D18175 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F57661A2A3EA27A00D18175 /* TabBarController.swift */; };
+		4F3EC6A32A403F5200B3E5D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F3EC6A22A403F5200B3E5D7 /* GoogleService-Info.plist */; };
 		4F576D922A3C45D8006D04F4 /* inPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F576D912A3C45D8006D04F4 /* inPostViewController.swift */; };
 		4F896ECB2A3DEC9A00814C54 /* MyBucketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ECA2A3DEC9A00814C54 /* MyBucketListViewController.swift */; };
 		4F896ECD2A3DECEC00814C54 /* NewContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */; };
@@ -25,13 +25,12 @@
 		4FBFD8912A3C22D4006A0101 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFD8902A3C22D4006A0101 /* Assets.xcassets */; };
 		4FBFD8942A3C22D4006A0101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FBFD8922A3C22D4006A0101 /* LaunchScreen.storyboard */; };
 		4FBFD89C2A3C27A6006A0101 /* PostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBFD89B2A3C27A6006A0101 /* PostCustomCell.swift */; };
-		4FF22A182A3F1D0000038937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FF22A172A3F1D0000038937 /* GoogleService-Info.plist */; };
 		586DD565FB6A3881849C8E32 /* Pods_BucketListPost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD9F68CEC8B0C46C980BE60 /* Pods_BucketListPost.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CD9F68CEC8B0C46C980BE60 /* Pods_BucketListPost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BucketListPost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F57661A2A3EA27A00D18175 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4F3EC6A22A403F5200B3E5D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F576D912A3C45D8006D04F4 /* inPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inPostViewController.swift; sourceTree = "<group>"; };
 		4F896ECA2A3DEC9A00814C54 /* MyBucketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBucketListViewController.swift; sourceTree = "<group>"; };
 		4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContentViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +50,6 @@
 		4FBFD8932A3C22D4006A0101 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FBFD8952A3C22D4006A0101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FBFD89B2A3C27A6006A0101 /* PostCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomCell.swift; sourceTree = "<group>"; };
-		4FF22A172A3F1D0000038937 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B0CA3BD25637A6B6AA70C79 /* Pods-BucketListPost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketListPost.debug.xcconfig"; path = "Target Support Files/Pods-BucketListPost/Pods-BucketListPost.debug.xcconfig"; sourceTree = "<group>"; };
 		E8D6AF2517250E58EAB4035A /* Pods-BucketListPost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BucketListPost.release.xcconfig"; path = "Target Support Files/Pods-BucketListPost/Pods-BucketListPost.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +85,6 @@
 				4F896ECC2A3DECEC00814C54 /* NewContentViewController.swift */,
 				4F896ECE2A3DED6100814C54 /* FreedomContentViewController.swift */,
 				4F896ED02A3DED8000814C54 /* MyPageViewController.swift */,
-				4F57661A2A3EA27A00D18175 /* TabBarController.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -126,9 +123,9 @@
 			children = (
 				4F5F36942A3F2254008323D5 /* Tabbar */,
 				4F5F36952A3F2271008323D5 /* Login */,
+				4F3EC6A22A403F5200B3E5D7 /* GoogleService-Info.plist */,
 				4FBFD8842A3C22D3006A0101 /* AppDelegate.swift */,
 				4FBFD8862A3C22D3006A0101 /* SceneDelegate.swift */,
-				4FF22A172A3F1D0000038937 /* GoogleService-Info.plist */,
 				4FBFD88A2A3C22D3006A0101 /* Main.storyboard */,
 				4FBFD8902A3C22D4006A0101 /* Assets.xcassets */,
 				4FBFD8922A3C22D4006A0101 /* LaunchScreen.storyboard */,
@@ -210,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FBFD8942A3C22D4006A0101 /* LaunchScreen.storyboard in Resources */,
-				4FF22A182A3F1D0000038937 /* GoogleService-Info.plist in Resources */,
+				4F3EC6A32A403F5200B3E5D7 /* GoogleService-Info.plist in Resources */,
 				4FBFD8912A3C22D4006A0101 /* Assets.xcassets in Resources */,
 				4FBFD88C2A3C22D3006A0101 /* Main.storyboard in Resources */,
 			);
@@ -265,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F57661B2A3EA27A00D18175 /* TabBarController.swift in Sources */,
 				4FBFD8892A3C22D3006A0101 /* MainViewController.swift in Sources */,
 				4F576D922A3C45D8006D04F4 /* inPostViewController.swift in Sources */,
 				4F896ED52A3DEE6800814C54 /* SigninViewController.swift in Sources */,

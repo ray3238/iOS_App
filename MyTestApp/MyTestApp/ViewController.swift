@@ -14,15 +14,15 @@ import FirebaseAuth
 class ViewController: UIViewController {
     
     @objc func btnActSubmit(_ sender: UIButton) {
-        guard let userEmail = idTextField.text else { return }
+        guard let userEmailet = idTextField.text else { return }
         guard let userPassword = pwTextField.text else  { return }
-        Auth.auth().signIn(withEmail: userEmail, password: userPassword) {
+        Auth.auth().signIn(withEmail: userEmailet, password: userPassword) {
             [weak self] user, error in
             guard let _ = self else { return }
             let user = Auth.auth().currentUser
             
-            if let userEmail = user?.email,
-               let userUid = user?.uid {
+            if  user?.email == userEmailet,
+                user?.uid == userPassword {
                 print("push!")
                 self!.signinButton.addTarget(self, action: #selector(self!.did), for: .touchUpInside)
             } else {
