@@ -810,6 +810,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IDP-cZ-qq0"/>
+                    <connections>
+                        <outlet property="signupClickedBtn" destination="WZS-Kv-uzW" id="Z9y-pQ-kMC"/>
+                        <outlet property="whyBucketListTextField" destination="YxI-WK-7IQ" id="8dA-5W-jyI"/>
+                        <outlet property="whyLabel" destination="ocl-B6-XfV" id="uaX-It-4j0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yq3-7J-xPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

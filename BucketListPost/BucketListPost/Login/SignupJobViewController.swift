@@ -17,27 +17,30 @@ class SignupJobViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if signupJobTextField.text?.isEmpty ?? true {
-            guard let vc = self.storyboard?.instantiateViewController(identifier: "vc3") as? WhyBucketListViewController else {
-                        return
-                    }
+//
+//        if signupJobTextField.text?.isEmpty ?? true {
+//
             print(id)
             print(password)
             print(signupJobLabel.text!)
-            vc.id = self.id
-            vc.password = self.password
-            vc.job = self.signupJobTextField.text!
+            
             self.signupBtn.addTarget(self, action: #selector(self.did), for: .touchUpInside)
-        }
-        else {
-            signupJobLabel.text = "필수 입력칸입니다"
-            signupJobLabel.textColor = .red
-        }
+//        }
+//        else {
+//            signupJobLabel.text = "필수 입력칸입니다"
+//            signupJobLabel.textColor = .red
+//        }
     }
     @objc func did() {
-        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "vc3") else { return
-        }
-        self.navigationController?.pushViewController(viewController, animated: true)
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "vc3") as? WhyBucketListViewController else {
+            return }
+        
+        vc.id1 = id
+        vc.password1 = password
+        vc.job1 = self.signupJobTextField.text!
+
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "vc3") else { return }
+                self.navigationController?.pushViewController(viewController, animated: true)
     }
     
 }
