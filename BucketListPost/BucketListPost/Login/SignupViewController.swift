@@ -12,28 +12,28 @@ import FirebaseAuth
 class SignupViewController: UIViewController {
     
     @IBAction func signupClickedBtn(_ sender: UIButton) {
-        Auth.auth().createUser(withEmail: idTextField.text!, password: pwTextField.text!
-        ) { (user, error) in
-            if user !=  nil, self.pwTextField.text == self.ConfirmPwTextField.text{
-                self.ConfirmPwLabel.text = " "
-                print("register success")
-                
-                self.signupBtn.addTarget(self, action: #selector(self.did), for: .touchUpInside)
-                
-                guard let vc = self.storyboard?.instantiateViewController(identifier: "vc2") as? SignupJobViewController else {
-                            return
-                        }
-                        
-                vc.spidData1 = self.idTextField.text!
-                vc.sppwData1 = self.pwTextField.text!
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-            else{
-                self.ConfirmPwLabel.text = "비밀번호가 일치하지 않습니다"
-                print("register failed")
-            }
+        //        Auth.auth().createUser(withEmail: idTextField.text!, password: pwTextField.text!
+        //        ) { (user, error) in
+        //            if user !=  nil, self.pwTextField.text == self.ConfirmPwTextField.text{
+        self.ConfirmPwLabel.text = ""
+        print("register success")
+        
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "vc2") as? SignupJobViewController else {
+            return
+        
+        self.signupBtn.addTarget(self, action: #selector(self.did), for: .touchUpInside)
         }
+        
+        vc.id = self.idTextField.text!
+        vc.password = self.pwTextField.text!
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    //            else{
+    //                self.ConfirmPwLabel.text = "비밀번호가 일치하지 않습니다"
+    //                print("register failed")
+    //            }
+    //}
+    //}
     
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var idTextField: UITextField!

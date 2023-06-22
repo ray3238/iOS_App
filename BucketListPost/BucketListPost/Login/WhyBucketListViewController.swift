@@ -9,16 +9,16 @@ import UIKit
 
 class WhyBucketListViewController: UIViewController {
 
-    var spidData3: String = ""
-    var sppwData3: String = ""
-    var spjobData3: String = ""
+    var id: String = ""
+    var password: String = ""
+    var job: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(spidData3)
-        print(sppwData3)
-        print(spjobData3)
+        print(id)
+        print(password)
+        print(job)
         // Do any additional setup after loading the view.
     }
     

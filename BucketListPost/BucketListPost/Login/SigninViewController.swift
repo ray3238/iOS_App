@@ -12,19 +12,23 @@ import FirebaseAuth
 class SigninViewController: UIViewController {
     
     @IBAction func signinClickedBtn(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: idTextField.text!, password: pwTextField.text!) { (user, error) in
+//        Auth.auth().signIn(withEmail: idTextField.text!, password: pwTextField.text!) { (user, error) in
             
-            if user != nil {
-                print("push!")
+//            if user != nil {
+//                print("push!")
                 self.signinBtn.addTarget(self, action: #selector(self.did), for: .touchUpInside)
-            }
+//            }
             
-            else {
-                print("로그인되지 않았습니다.", error?.localizedDescription ?? "")
-            }
-        }
+//            else {
+//                print("로그인되지 않았습니다.", error?.localizedDescription ?? "")
+//            }
+//        }
     }
         
+    
+    // MARK: 경계선
+    
+    
     //    @IBAction func signinCleckedBtn(_ sender: UIButton) {
     //        guard let userEmail = idTextField.text else { return }
     //        guard let userPassword = pwTextField.text else  { return }
