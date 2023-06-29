@@ -30,5 +30,4 @@ class WhyBucketListViewController: UIViewController {
         whyLabel.text = id1
     }
 }
-
-//죄송합니다 커밋을 안했네용
+ 
