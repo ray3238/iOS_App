@@ -1,0 +1,6 @@
+framework module Pods_SnapkitPractice {
+  umbrella header "Pods-SnapkitPractice-umbrella.h"
+
+  export *
+  module * { export * }
+}

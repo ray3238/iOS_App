@@ -1,0 +1,6 @@
+framework module Pods_SnapkitApi {
+  umbrella header "Pods-SnapkitApi-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedSectionHeaderHeight = 0
+        print("안녕")
     }
     
     override func viewDidAppear(_ animated: Bool) {

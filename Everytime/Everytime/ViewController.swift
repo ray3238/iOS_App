@@ -10,7 +10,11 @@ import SnapKit
 import Then
 
 class ViewController: UIViewController {
-
+    let smallTextView = UITextView().then {
+        $0.text = "안녕하세요"
+        $0.backgroundColor = .white
+    }
+    
     let smallTitleLabel = UILabel().then {
         $0.text = "대학생활을 더 편하고 즐겁게"
         $0.textColor = .gray
@@ -73,6 +77,7 @@ class ViewController: UIViewController {
     
     func addSubview() {
         [
+            smallTextView,
             smallTitleLabel,
             titleLabel,
             idTextField,
@@ -86,6 +91,12 @@ class ViewController: UIViewController {
     }
     
     func makeConstraints() {
+        smallTextView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(100)
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(smallTitleLabel).inset(30)
+            $0.right.equalToSuperview().inset(30)
+        }
         smallTitleLabel.snp.remakeConstraints {
             $0.top.equalToSuperview().inset(300)
             $0.centerX.equalToSuperview()
