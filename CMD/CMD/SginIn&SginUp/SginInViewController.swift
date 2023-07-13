@@ -94,6 +94,7 @@ class SginInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("1")
         view.backgroundColor = .white
         addSubView()
         makeConstraints()
@@ -104,11 +105,13 @@ class SginInViewController: UIViewController {
     }
     
     @objc func MainVCSwift() {
-        self.navigationController?.pushViewController(MainHomeViewController(), animated: true)
+        print("sgin in!")
+        self.navigationController?.pushViewController(MainTabBarViewController(), animated: true)
         //여기에 로그인 API
     }
     
     @objc func sginUpVCSwift() {
+        print("shift sginUpView!")
         self.navigationController?.pushViewController(SginUpViewController(), animated: true)
     }
     

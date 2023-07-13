@@ -31,6 +31,7 @@ class SubjectTableViewControllerCell: UITableViewCell {
     }
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        print("5")
         backgroundColor = UIColor(named: "Main1")
         contentView()
         makeConstraints()

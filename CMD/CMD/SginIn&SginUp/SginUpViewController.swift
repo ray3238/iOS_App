@@ -5,7 +5,6 @@
 //  Created by 이태규 on 2023/07/09.
 //
 
-//회원가입 페이지 미완성
 import UIKit
 import SnapKit
 import Then
@@ -124,6 +123,7 @@ class SginUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("2")
         view.backgroundColor = .white
         addSubView()
         makeConstraints()

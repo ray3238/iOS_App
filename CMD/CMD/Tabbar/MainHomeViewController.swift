@@ -5,6 +5,9 @@
 //  Created by 이태규 on 2023/07/11.
 //
 
+//로그인하면 탭바로 와야할지
+//아니면 메인 화면으로 가야할지
+
 import UIKit
 import SnapKit
 import Then
@@ -30,6 +33,7 @@ class MainHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "Main1")
+        print("4")
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
@@ -61,7 +65,7 @@ class MainHomeViewController: UIViewController {
             $0.top.equalTo(dateLabel).inset(20)
             $0.left.equalToSuperview().inset(13)
             $0.right.equalToSuperview().inset(13)
-            $0.bottom.equalToSuperview().inset(20)
+            $0.bottom.equalToSuperview().inset(90)
         }
     }
 }

@@ -16,9 +16,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-
-        let mainViewController = UINavigationController(rootViewController: SginInViewController())
-        window?.rootViewController = mainViewController
+        window?.windowScene = scene
+        
+        let firstViewController = UINavigationController(rootViewController: MainHomeViewController())
+//        let secondViewController = UINavigationController(rootViewController: StudentInfoViewController())
+//        let thirdViewController = UINavigationController(rootViewController: NotificationViewController())
+//        
+//        let tabBarViewController = UITabBarController()
+//        tabBarViewController.setViewControllers([firstViewController, secondViewController, thirdViewController], animated: true)
+//
+//        if let items = tabBarViewController.tabBar.items {
+//            items[0].selectedImage = UIImage(systemName: "house")
+//            items[0].image = UIImage(systemName: "house")
+//            items[0].title = "시간표"
+//
+//            items[1].selectedImage = UIImage(systemName: "eye")
+//            items[1].image = UIImage(systemName: "eye")
+//            items[1].title = "시간표"
+//
+//            items[2].selectedImage = UIImage(systemName: "eye")
+//            items[2].image = UIImage(systemName: "eye")
+//            items[2].title = "시간표"
+//        }
+//        
+        window?.rootViewController? = firstViewController
         window?.makeKeyAndVisible()
         
     }
