@@ -1,0 +1,6 @@
+framework module Pods_CMD_Test {
+  umbrella header "Pods-CMD_Test-umbrella.h"
+
+  export *
+  module * { export * }
+}

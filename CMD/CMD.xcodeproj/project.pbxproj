@@ -16,7 +16,7 @@
 		4F98DE652A5C5EEB00F8B123 /* SginUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F98DE642A5C5EEB00F8B123 /* SginUpViewController.swift */; };
 		4FBDB8742A5D47610037E143 /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDB8732A5D47610037E143 /* MainHomeViewController.swift */; };
 		4FBDB8762A5D63740037E143 /* SubjectTableViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDB8752A5D63740037E143 /* SubjectTableViewControllerCell.swift */; };
-		4FBDB8792A5D9D600037E143 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDB8782A5D9D600037E143 /* MainTabBarViewController.swift */; };
+		4FBDB8792A5D9D600037E143 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDB8782A5D9D600037E143 /* TabBarController.swift */; };
 		4FBDB87B2A5D9E310037E143 /* StudentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDB87A2A5D9E310037E143 /* StudentInfoViewController.swift */; };
 		4FBDB87D2A5D9E7B0037E143 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDB87C2A5D9E7B0037E143 /* NotificationViewController.swift */; };
 		4FBDB8822A5E3FDF0037E143 /* CollectionViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBDB8812A5E3FDF0037E143 /* CollectionViewCustomCell.swift */; };
@@ -35,7 +35,7 @@
 		4F98DE642A5C5EEB00F8B123 /* SginUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SginUpViewController.swift; sourceTree = "<group>"; };
 		4FBDB8732A5D47610037E143 /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
 		4FBDB8752A5D63740037E143 /* SubjectTableViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewControllerCell.swift; sourceTree = "<group>"; };
-		4FBDB8782A5D9D600037E143 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		4FBDB8782A5D9D600037E143 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4FBDB87A2A5D9E310037E143 /* StudentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoViewController.swift; sourceTree = "<group>"; };
 		4FBDB87C2A5D9E7B0037E143 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		4FBDB8812A5E3FDF0037E143 /* CollectionViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCustomCell.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		4FBDB87E2A5D9E930037E143 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				4FBDB8782A5D9D600037E143 /* MainTabBarViewController.swift */,
+				4FBDB8782A5D9D600037E143 /* TabBarController.swift */,
 				4FBDB8732A5D47610037E143 /* MainHomeViewController.swift */,
 				4FBDB8752A5D63740037E143 /* SubjectTableViewControllerCell.swift */,
 				4FBDB87A2A5D9E310037E143 /* StudentInfoViewController.swift */,
@@ -243,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FBDB87D2A5D9E7B0037E143 /* NotificationViewController.swift in Sources */,
-				4FBDB8792A5D9D600037E143 /* MainTabBarViewController.swift in Sources */,
+				4FBDB8792A5D9D600037E143 /* TabBarController.swift in Sources */,
 				4F98DE652A5C5EEB00F8B123 /* SginUpViewController.swift in Sources */,
 				4FBDB8762A5D63740037E143 /* SubjectTableViewControllerCell.swift in Sources */,
 				4F98DE562A5AEB4C00F8B123 /* CMD.xcdatamodeld in Sources */,
@@ -397,6 +397,7 @@
 				INFOPLIST_FILE = CMD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -425,6 +426,7 @@
 				INFOPLIST_FILE = CMD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

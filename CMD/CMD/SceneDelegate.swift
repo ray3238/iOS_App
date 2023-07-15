@@ -11,17 +11,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
+        //        do {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.windowScene = scene
         
-        let firstViewController = UINavigationController(rootViewController: MainHomeViewController())
+        window?.backgroundColor = .systemBackground
+//        window?.rootViewController = TabBarController()
+        let navigationController = UINavigationController(rootViewController: TabBarController())
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        //
+        //        }
+        //        guard let _ = (scene as? UIWindowScene) else { return }
+        //    }
+    }
+    
+}
+
+
+//    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+//
+//        guard let scene = (scene as? UIWindowScene) else { return }
+//        window = UIWindow(windowScene: scene)
+//
+//        let firstViewController = MainHomeViewController()
 //        let secondViewController = UINavigationController(rootViewController: StudentInfoViewController())
 //        let thirdViewController = UINavigationController(rootViewController: NotificationViewController())
-//        
+//
 //        let tabBarViewController = UITabBarController()
 //        tabBarViewController.setViewControllers([firstViewController, secondViewController, thirdViewController], animated: true)
 //
@@ -38,12 +55,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            items[2].image = UIImage(systemName: "eye")
 //            items[2].title = "시간표"
 //        }
-//        
-        window?.rootViewController? = firstViewController
-        window?.makeKeyAndVisible()
-        
-    }
-}
+////
+//        window?.rootViewController? = MainHomeViewController()
+//        window?.makeKeyAndVisible()
+//
+//    }
+//}
 
 func sceneDidDisconnect(_ scene: UIScene) {
     // Called as the scene is being released by the system.
@@ -75,5 +92,4 @@ func sceneDidEnterBackground(_ scene: UIScene) {
     // Save changes in the application's managed object context when the application transitions to the background.
     (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 }
-
 

@@ -32,18 +32,16 @@ class MainHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .red
         view.backgroundColor = UIColor(named: "Main1")
         print("4")
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 100
-    }
-    override func viewDidLayoutSubviews() {
         addSubView()
         makeConstraints()
     }
+    
     func addSubView() {
         [
             MainLabel,

@@ -106,7 +106,7 @@ class SginInViewController: UIViewController {
     
     @objc func MainVCSwift() {
         print("sgin in!")
-        self.navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+        self.navigationController?.pushViewController(TabBarController(), animated: true)
         //여기에 로그인 API
     }
     
