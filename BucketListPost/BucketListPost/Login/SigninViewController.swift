@@ -29,23 +29,23 @@ class SigninViewController: UIViewController {
     // MARK: 경계선
     
     
-    //    @IBAction func signinCleckedBtn(_ sender: UIButton) {
-    //        guard let userEmail = idTextField.text else { return }
-    //        guard let userPassword = pwTextField.text else  { return }
-//        Auth.auth().signIn(withEmail: userEmail, password: userPassword) {
-//            [weak self] user, error in
-//            guard let _ = self else { return }
-//            let user = Auth.auth().currentUser
-//
-//            if let userEmail = user?.email,
-//               let userUid = user?.uid {
-//                print("push!")
-//                self!.signinBtn.addTarget(self, action: #selector(self!.did), for: .touchUpInside)
-//            } else {
-//                print("로그인되지 않았습니다.", error?.localizedDescription ?? "")
-//            }
-//        }
-//    }
+        @IBAction func signinCleckedBtn(_ sender: UIButton) {
+            guard let userEmail = idTextField.text else { return }
+            guard let userPassword = pwTextField.text else  { return }
+        Auth.auth().signIn(withEmail: userEmail, password: userPassword) {
+            [weak self] user, error in
+            guard let _ = self else { return }
+            let user = Auth.auth().currentUser
+
+            if let userEmail = user?.email,
+               let userUid = user?.uid {
+                print("push!")
+                self!.signinBtn.addTarget(self, action: #selector(self!.did), for: .touchUpInside)
+            } else {
+                print("로그인되지 않았습니다.", error?.localizedDescription ?? "")
+            }
+        }
+    }
     
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var idTextField: UITextField!
