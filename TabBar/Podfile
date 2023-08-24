@@ -8,5 +8,5 @@ target 'TabBar' do
   # Pods for TabBar
     pod 'Alamofire'
   pod 'lottie-ios'
-
+  pod 'Moya'
 end

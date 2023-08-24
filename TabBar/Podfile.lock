@@ -1,20 +1,27 @@
 PODS:
   - Alamofire (5.7.1)
   - lottie-ios (4.2.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
 
 DEPENDENCIES:
   - Alamofire
   - lottie-ios
+  - Moya
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - lottie-ios
+    - Moya
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
 
-PODFILE CHECKSUM: c893ddeed60610b7a0223464555b4149c4154e6d
+PODFILE CHECKSUM: 19f3278a0bf9d379738224f0b4d536239671e060
 
 COCOAPODS: 1.12.1
