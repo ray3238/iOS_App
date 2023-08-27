@@ -1,8 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-CMD/Pods-CMD-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
-${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
-${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
-${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
-${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
-${BUILT_PRODUCTS_DIR}/Then/Then.framework
