@@ -1,7 +1,6 @@
-var s1: [String] = ["a", "b", "c"]
-var s2: [String] = ["com", "b", "d", "p", "c"]
 
-var s3: Int = 0
+var sortedNumbers: [Int] = [0, 31, 24, 10, 1, 9]
 
-s3 = s1.filter { $0.contains(s2) }.count
+var sorted = sortedNumbers.sorted()
+print(sorted[sortedNumbers.count-2] * sorted[sortedNumbers.count-1])
 
