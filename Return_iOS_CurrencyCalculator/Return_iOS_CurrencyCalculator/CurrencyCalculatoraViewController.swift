@@ -5,12 +5,18 @@ import Moya
 
 class CurrencyCalculatoraViewController: UIViewController {
     ///////////////
-    let countries: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
+    let countries1: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
+    let countries2: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
     
     
-    let picker = UIPickerView()
+    let remittancePicker = UIPickerView()
+    let recipientPicker = UIPickerView()
+    
     
     private let countryOfRemittancePickerTextField = UITextField().then {
+        $0.text = "(나라 선택)"
+    }
+    private let recipientCountryPickerTextField = UITextField().then {
         $0.text = "(나라 선택)"
     }
     /////////////
@@ -104,7 +110,8 @@ class CurrencyCalculatoraViewController: UIViewController {
             remittanceAmountTextField,
             remittanceAmountLabel,
             calculatoraButton,
-            countryOfRemittancePickerTextField
+            countryOfRemittancePickerTextField,
+            recipientCountryPickerTextField
         ].forEach {
             view.addSubview($0)
         }
@@ -119,12 +126,6 @@ class CurrencyCalculatoraViewController: UIViewController {
             $0.top.equalTo(currencyCalculatoraViewLabel).inset(88)
             $0.left.equalToSuperview().inset(24)
         }
-        //
-//        countryOfRemittanceButton.snp.makeConstraints {
-//            $0.top.equalTo(currencyCalculatoraViewLabel).inset(83)
-//            $0.left.equalTo(countryOfRemittanceViewLabel).inset(255)
-//        }
-        //
         countryOfRemittancePickerTextField.snp.makeConstraints {
             $0.top.equalTo(currencyCalculatoraViewLabel).inset(83)
             $0.left.equalTo(countryOfRemittanceViewLabel).inset(255)
@@ -134,17 +135,21 @@ class CurrencyCalculatoraViewController: UIViewController {
             $0.left.equalToSuperview().inset(24)
         }
         //
-        recipientCountryButton.snp.makeConstraints {
+        recipientCountryPickerTextField.snp.makeConstraints {
             $0.top.equalTo(countryOfRemittancePickerTextField).inset(36)
             $0.left.equalTo(recipientCountryViewLabel).inset(255)
         }
+//        recipientCountryButton.snp.makeConstraints {
+//            $0.top.equalTo(countryOfRemittancePickerTextField).inset(36)
+//            $0.left.equalTo(recipientCountryViewLabel).inset(255)
+//        }
         //
         exchangeRateViewLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryViewLabel).inset(36)
             $0.left.equalToSuperview().inset(24)
         }
         exchangeRateLabel.snp.makeConstraints {
-            $0.top.equalTo(recipientCountryButton).inset(41)
+            $0.top.equalTo(recipientCountryPickerTextField).inset(41)
             $0.left.equalTo(exchangeRateViewLabel).inset(175)
         }
         timeViewLabel.snp.makeConstraints {
@@ -190,9 +195,13 @@ class CurrencyCalculatoraViewController: UIViewController {
 extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     // delegate, datasource 연결 및 picker를 textfied의 inputview로 설정한다
     func configPickerView() {
-        picker.delegate = self
-        picker.dataSource = self
-        countryOfRemittancePickerTextField.inputView = picker
+        remittancePicker.delegate = self
+        remittancePicker.dataSource = self
+        
+        recipientPicker.delegate = self
+        recipientPicker.dataSource = self
+        countryOfRemittancePickerTextField.inputView = remittancePicker
+        recipientCountryPickerTextField.inputView = recipientPicker
     }
     // pickerview는 하나만
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -200,14 +209,30 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
     }
     // pickerview의 선택지는 데이터의 개수만큼
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return countries.count
+//        return countries1.count
+        if pickerView == remittancePicker {
+            return countries1.count
+        } else if pickerView == recipientPicker {
+            return countries2.count
+        }
+        return 0
     }
     // pickerview 내 선택지의 값들을 원하는 데이터로 채워준다.
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return countries[row]
+//        return countries1[row]
+        if pickerView == remittancePicker {
+            return countries1[row]
+        } else if pickerView == recipientPicker {
+            return countries2[row]
+        }
+        return nil
     }
     // textfield의 텍스트에 pickerview에서 선택한 값을 넣어준다.
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.countryOfRemittancePickerTextField.text = self.countries[row]
+        if pickerView == remittancePicker {
+            self.countryOfRemittancePickerTextField.text = self.countries1[row]
+        } else if pickerView == recipientPicker {
+            self.recipientCountryPickerTextField.text = self.countries2[row]
+        }
     }
 }
