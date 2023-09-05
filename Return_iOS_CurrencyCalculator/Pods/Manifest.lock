@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.7.1)
+  - DropDown (2.3.13)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - SnapKit (5.6.0)
+  - Then (3.0.0)
+
+DEPENDENCIES:
+  - DropDown
+  - Moya
+  - SnapKit
+  - Then
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DropDown
+    - Moya
+    - SnapKit
+    - Then
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+
+PODFILE CHECKSUM: f0ca35411593f168f3fcf19bd4f86e5d0d985a9b
+
+COCOAPODS: 1.12.1
