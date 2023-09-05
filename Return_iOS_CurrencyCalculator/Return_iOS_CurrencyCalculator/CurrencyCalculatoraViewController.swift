@@ -234,6 +234,6 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
         } else if pickerView == recipientPicker {
             self.recipientCountryPickerTextField.text = self.countries2[row]
         }
-        //
+        
     }
 }
