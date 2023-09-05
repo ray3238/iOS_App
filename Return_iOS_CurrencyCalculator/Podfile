@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Return_iOS_CurrencyCalculator' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Return_iOS_CurrencyCalculator
+  pod 'SnapKit'
+  pod 'Then'
+  pod 'Moya'
+  pod 'DropDown'
+end

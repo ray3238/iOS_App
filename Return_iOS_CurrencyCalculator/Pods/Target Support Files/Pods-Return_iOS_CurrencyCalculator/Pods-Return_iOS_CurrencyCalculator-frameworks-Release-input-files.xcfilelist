@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-Return_iOS_CurrencyCalculator/Pods-Return_iOS_CurrencyCalculator-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
+${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/Then/Then.framework
