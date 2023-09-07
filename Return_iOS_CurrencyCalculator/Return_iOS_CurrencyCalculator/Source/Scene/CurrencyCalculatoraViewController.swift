@@ -106,6 +106,7 @@ class CurrencyCalculatoraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        textFieldSetting()
         configPickerView()
         self.calculatoraButton.addTarget(self, action: #selector(self.goAmountReceived), for: .touchUpInside)
     }
@@ -284,5 +285,17 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
             self.recipientCountryPickerTextField.text = self.countries2[row]
             self.exchangeRecipientLabel.text = self.countriesMoney[row]
         }
+    }
+}
+
+extension CurrencyCalculatoraViewController: UITextFieldDelegate {
+    func textFieldSetting() {
+        countryOfRemittancePickerTextField.delegate = self
+        recipientCountryPickerTextField.delegate = self
+        countryOfRemittancePickerTextField.tintColor = .clear
+        recipientCountryPickerTextField.tintColor = .clear
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            return false
     }
 }
