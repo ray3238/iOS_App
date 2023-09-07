@@ -7,11 +7,17 @@ class CurrencyCalculatoraViewController: UIViewController {
     ///////////////
     let countries1: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
     let countries2: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
-    
+    let countriesMoney: [String] = ["KRW", "USD", "PHP", "JPY"]
     
     let remittancePicker = UIPickerView()
+//    private let toolbar = UIToolbar().then {
+//        $0.barStyle = .default
+//        $0.sizeToFit()
+//        let doneButton = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(hidePickerView))
+//        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+//        $0.setItems([spaceButton, doneButton], animated: false)
+//    }
     let recipientPicker = UIPickerView()
-    
     
     private let countryOfRemittancePickerTextField = UITextField().then {
         $0.text = "(나라 선택)"
@@ -47,23 +53,40 @@ class CurrencyCalculatoraViewController: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 18)
     }
     private let exchangeRateLabel = UILabel().then {
-        $0.text = "1,302.05 KRW / USD"
+        $0.text = "1,302.05"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
+    ////// 레이아웃 만져야함
+    private let exchangeRemittanceLabel = UILabel().then {
+        $0.text = "KRW"
+    }
+    private let slashLabel = UILabel().then {
+        $0.text = "/"
+    }
+    private let exchangeRecipientLabel = UILabel().then {
+        $0.text = "USD"
+    }
+    ////
     private let timeViewLabel = UILabel().then {
         $0.text = "조회시간"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
-    private let timeLabel = UILabel().then {
-        $0.text = "2023-9-5 / 12:50:20"
+    //// 레이아웃 만져야함 (dateLabel 은 이미 설정 되어있는데 바뀔수도)
+    private let dateLabel = UILabel().then {
+        $0.text = "2023-9-5 /"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
+    private let timeLabel = UILabel().then {
+        $0.text = "12:50:20"
+        $0.font = UIFont.systemFont(ofSize: 18)
+    }
+    ////
     private let remittanceAmountViewLabel = UILabel().then {
         $0.text = "송금액"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
     private let remittanceAmountTextField = UITextField().then {
-        $0.placeholder = "USD를 입력해주세요."
+        $0.placeholder = "USD를 입력해주세요"
         $0.textAlignment = .right
         $0.layer.borderWidth = 1.0
         $0.layer.borderColor = UIColor.black.cgColor
@@ -104,14 +127,19 @@ class CurrencyCalculatoraViewController: UIViewController {
             recipientCountryViewLabel,
             exchangeRateViewLabel,
             exchangeRateLabel,
+            exchangeRemittanceLabel,
+            slashLabel,
+            exchangeRecipientLabel,
             timeViewLabel,
+            dateLabel,
             timeLabel,
             remittanceAmountViewLabel,
             remittanceAmountTextField,
             remittanceAmountLabel,
             calculatoraButton,
             countryOfRemittancePickerTextField,
-            recipientCountryPickerTextField
+            recipientCountryPickerTextField,
+//            toolbar
         ].forEach {
             view.addSubview($0)
         }
@@ -134,16 +162,10 @@ class CurrencyCalculatoraViewController: UIViewController {
             $0.top.equalTo(countryOfRemittanceViewLabel).inset(36)
             $0.left.equalToSuperview().inset(24)
         }
-        //
         recipientCountryPickerTextField.snp.makeConstraints {
             $0.top.equalTo(countryOfRemittancePickerTextField).inset(36)
             $0.left.equalTo(recipientCountryViewLabel).inset(255)
         }
-//        recipientCountryButton.snp.makeConstraints {
-//            $0.top.equalTo(countryOfRemittancePickerTextField).inset(36)
-//            $0.left.equalTo(recipientCountryViewLabel).inset(255)
-//        }
-        //
         exchangeRateViewLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryViewLabel).inset(36)
             $0.left.equalToSuperview().inset(24)
@@ -152,32 +174,53 @@ class CurrencyCalculatoraViewController: UIViewController {
             $0.top.equalTo(recipientCountryPickerTextField).inset(41)
             $0.left.equalTo(exchangeRateViewLabel).inset(175)
         }
+        exchangeRemittanceLabel.snp.makeConstraints {
+            $0.top.equalTo(recipientCountryPickerTextField).inset(41)
+            $0.left.equalTo(exchangeRateLabel).inset(80)
+        }
+        slashLabel.snp.makeConstraints {
+            $0.top.equalTo(recipientCountryPickerTextField).inset(41)
+            $0.left.equalTo(exchangeRemittanceLabel).inset(39)
+        }
+        exchangeRecipientLabel.snp.makeConstraints {
+            $0.top.equalTo(recipientCountryPickerTextField).inset(41)
+            $0.left.equalTo(exchangeRemittanceLabel).inset(50)
+        }
         timeViewLabel.snp.makeConstraints {
             $0.top.equalTo(exchangeRateViewLabel).inset(36)
             $0.left.equalToSuperview().inset(24)
         }
-        timeLabel.snp.makeConstraints {
+        dateLabel.snp.makeConstraints {
             $0.top.equalTo(exchangeRateLabel).inset(36)
             $0.left.equalTo(timeViewLabel).inset(175)
+        }
+        timeLabel.snp.makeConstraints {
+            $0.top.equalTo(exchangeRateLabel).inset(36)
+            $0.left.equalTo(dateLabel).inset(95)
         }
         remittanceAmountViewLabel.snp.makeConstraints {
             $0.top.equalTo(timeViewLabel).inset(36)
             $0.left.equalToSuperview().inset(24)
         }
         remittanceAmountLabel.snp.makeConstraints {
-            $0.top.equalTo(timeLabel).inset(36)
-            $0.left.equalTo(remittanceAmountViewLabel).inset(300)
+            $0.top.equalTo(dateLabel).inset(36)
+            $0.left.equalTo(remittanceAmountViewLabel).inset(290)
         }
         remittanceAmountTextField.snp.makeConstraints {
-            $0.top.equalTo(timeLabel).inset(36)
-            $0.left.equalTo(remittanceAmountViewLabel).inset(150)
-            $0.right.equalTo(remittanceAmountLabel).inset(50)
+            $0.top.equalTo(dateLabel).inset(36)
+            $0.left.equalTo(remittanceAmountViewLabel).inset(140)
+            $0.right.equalToSuperview().inset(80)
         }
         calculatoraButton.snp.makeConstraints {
             $0.top.equalTo(remittanceAmountLabel).inset(161)
             $0.left.equalToSuperview().inset(130)
             $0.right.equalToSuperview().inset(131)
         }
+//        toolbar.snp.makeConstraints {
+//            $0.top.equalToSuperview()
+//            $0.leading.equalToSuperview()
+//            $0.trailing.equalToSuperview()
+//        }
     }
     
     @objc func goAmountReceivedClickedButton(_ sender: UIButton) {
@@ -188,6 +231,10 @@ class CurrencyCalculatoraViewController: UIViewController {
         print("실행됨")
         self.navigationController?.pushViewController(AmountReceivedViewController(), animated: true)
     }
+//    @objc func hidePickerView() {
+//        remittancePicker.isHidden = true
+//        toolbar.isHidden = true
+//    }
 }
 
 
@@ -231,9 +278,11 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == remittancePicker {
             self.countryOfRemittancePickerTextField.text = self.countries1[row]
+            self.remittanceAmountLabel.text = self.countries1[row]
+            self.exchangeRemittanceLabel.text = self.countriesMoney[row]
         } else if pickerView == recipientPicker {
             self.recipientCountryPickerTextField.text = self.countries2[row]
+            self.exchangeRecipientLabel.text = self.countriesMoney[row]
         }
-        
     }
 }
