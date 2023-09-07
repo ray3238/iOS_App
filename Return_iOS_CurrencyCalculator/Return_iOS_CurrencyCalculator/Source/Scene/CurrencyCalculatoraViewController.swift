@@ -4,7 +4,6 @@ import Then
 import Moya
 
 class CurrencyCalculatoraViewController: UIViewController {
-    ///////////////
     let countries1: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
     let countries2: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
     let countriesMoney: [String] = ["KRW", "USD", "PHP", "JPY"]
@@ -25,7 +24,6 @@ class CurrencyCalculatoraViewController: UIViewController {
     private let recipientCountryPickerTextField = UITextField().then {
         $0.text = "(나라 선택)"
     }
-    /////////////
     private let currencyCalculatoraViewLabel = UILabel().then {
         $0.text = "환율 계산"
         $0.font = UIFont.systemFont(ofSize: 36)
@@ -56,7 +54,6 @@ class CurrencyCalculatoraViewController: UIViewController {
         $0.text = "1,302.05"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
-    ////// 레이아웃 만져야함
     private let exchangeRemittanceLabel = UILabel().then {
         $0.text = "KRW"
     }
@@ -66,12 +63,10 @@ class CurrencyCalculatoraViewController: UIViewController {
     private let exchangeRecipientLabel = UILabel().then {
         $0.text = "USD"
     }
-    ////
     private let timeViewLabel = UILabel().then {
         $0.text = "조회시간"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
-    //// 레이아웃 만져야함 (dateLabel 은 이미 설정 되어있는데 바뀔수도)
     private let dateLabel = UILabel().then {
         $0.text = "2023-9-5 /"
         $0.font = UIFont.systemFont(ofSize: 18)
@@ -80,7 +75,6 @@ class CurrencyCalculatoraViewController: UIViewController {
         $0.text = "12:50:20"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
-    ////
     private let remittanceAmountViewLabel = UILabel().then {
         $0.text = "송금액"
         $0.font = UIFont.systemFont(ofSize: 18)
@@ -120,11 +114,8 @@ class CurrencyCalculatoraViewController: UIViewController {
         [
             currencyCalculatoraViewLabel,
             countryOfRemittanceViewLabel,
-            //
             countryOfRemittanceButton,
-            //
             recipientCountryButton,
-            //
             recipientCountryViewLabel,
             exchangeRateViewLabel,
             exchangeRateLabel,
@@ -257,7 +248,6 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
     }
     // pickerview의 선택지는 데이터의 개수만큼
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return countries1.count
         if pickerView == remittancePicker {
             return countries1.count
         } else if pickerView == recipientPicker {
@@ -267,7 +257,6 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
     }
     // pickerview 내 선택지의 값들을 원하는 데이터로 채워준다.
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return countries1[row]
         if pickerView == remittancePicker {
             return countries1[row]
         } else if pickerView == recipientPicker {
