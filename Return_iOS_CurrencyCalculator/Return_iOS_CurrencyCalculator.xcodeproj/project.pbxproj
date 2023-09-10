@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F48D0662AA64365006A5B4F /* AmountReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48D0652AA64365006A5B4F /* AmountReceivedViewController.swift */; };
 		4F7E55BF2AA80696002CA0D5 /* CurrencyCalculatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7E55BE2AA80696002CA0D5 /* CurrencyCalculatorService.swift */; };
+		4F7E55CB2AACB5C3002CA0D5 /* CurrencyCalculatorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7E55CA2AACB5C3002CA0D5 /* CurrencyCalculatorResponse.swift */; };
+		4F7E55CD2AACB831002CA0D5 /* CurrencyCountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7E55CC2AACB831002CA0D5 /* CurrencyCountryInfo.swift */; };
 		4FD252602AA623A6009572A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2525F2AA623A6009572A9 /* AppDelegate.swift */; };
 		4FD252622AA623A6009572A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD252612AA623A6009572A9 /* SceneDelegate.swift */; };
 		4FD252642AA623A6009572A9 /* CurrencyCalculatoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD252632AA623A6009572A9 /* CurrencyCalculatoraViewController.swift */; };
@@ -21,6 +23,8 @@
 		16A5AC1363125925A628D6C7 /* Pods-Return_iOS_CurrencyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Return_iOS_CurrencyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-Return_iOS_CurrencyCalculator/Pods-Return_iOS_CurrencyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		4F48D0652AA64365006A5B4F /* AmountReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountReceivedViewController.swift; sourceTree = "<group>"; };
 		4F7E55BE2AA80696002CA0D5 /* CurrencyCalculatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCalculatorService.swift; sourceTree = "<group>"; };
+		4F7E55CA2AACB5C3002CA0D5 /* CurrencyCalculatorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCalculatorResponse.swift; sourceTree = "<group>"; };
+		4F7E55CC2AACB831002CA0D5 /* CurrencyCountryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCountryInfo.swift; sourceTree = "<group>"; };
 		4FD2525C2AA623A6009572A9 /* Return_iOS_CurrencyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Return_iOS_CurrencyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD2525F2AA623A6009572A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD252612AA623A6009572A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +51,7 @@
 		4F7E55C02AA806A7002CA0D5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4F7E55BE2AA80696002CA0D5 /* CurrencyCalculatorService.swift */,
+				4F7E55C72AACB578002CA0D5 /* CurrencyCalculator */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -79,6 +83,32 @@
 				4F48D0652AA64365006A5B4F /* AmountReceivedViewController.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		4F7E55C72AACB578002CA0D5 /* CurrencyCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				4F7E55C82AACB598002CA0D5 /* API */,
+				4F7E55C92AACB59C002CA0D5 /* Response */,
+			);
+			path = CurrencyCalculator;
+			sourceTree = "<group>";
+		};
+		4F7E55C82AACB598002CA0D5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4F7E55BE2AA80696002CA0D5 /* CurrencyCalculatorService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4F7E55C92AACB59C002CA0D5 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				4F7E55CA2AACB5C3002CA0D5 /* CurrencyCalculatorResponse.swift */,
+				4F7E55CC2AACB831002CA0D5 /* CurrencyCountryInfo.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		4FD252532AA623A6009572A9 = {
@@ -242,6 +272,8 @@
 			files = (
 				4FD252642AA623A6009572A9 /* CurrencyCalculatoraViewController.swift in Sources */,
 				4F7E55BF2AA80696002CA0D5 /* CurrencyCalculatorService.swift in Sources */,
+				4F7E55CD2AACB831002CA0D5 /* CurrencyCountryInfo.swift in Sources */,
+				4F7E55CB2AACB5C3002CA0D5 /* CurrencyCalculatorResponse.swift in Sources */,
 				4FD252602AA623A6009572A9 /* AppDelegate.swift in Sources */,
 				4FD252622AA623A6009572A9 /* SceneDelegate.swift in Sources */,
 				4F48D0662AA64365006A5B4F /* AmountReceivedViewController.swift in Sources */,

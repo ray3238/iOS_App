@@ -5,7 +5,7 @@ import Moya
 import DropDown
 
 class AmountReceivedViewController: UIViewController {
-
+    
     private let amountReceivedViewLabel = UILabel().then {
         $0.text = "수취금액"
         $0.font = UIFont.systemFont(ofSize: 36)
@@ -14,22 +14,33 @@ class AmountReceivedViewController: UIViewController {
         $0.text = "수취금액은"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
-    let exchangeRateViewNumberLabel = UILabel().then {
+    var exchangeRateViewNumberLabel = UILabel().then {
         $0.text = "1,302.05"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
     let exchangeRateViewLabel = UILabel().then {
-        $0.text = "KRW" + "입니다."
+        $0.text = "입니다."
         $0.font = UIFont.systemFont(ofSize: 18)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        setLable()
+    }
+
     override func viewDidLayoutSubviews() {
         addSubView()
         setLayout()
+    }
+    
+    func setLable() {
+//        exchangeRateViewNumberLabel.text = CurrencyCountry.shared.currency
+//        let hi:Double = Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)!
+        exchangeRateViewNumberLabel.text = String(Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)!)
+//        print("\(String(describing: CurrencyCountry.shared.numberData))")
+//        print("\(hi)")
     }
     
     func addSubView() {
