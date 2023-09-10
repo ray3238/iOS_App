@@ -56,7 +56,7 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		4F7E55C12AA806B4002CA0D5 /* Resource */ = {
+		4F7E55C12AA806B4002CA0D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				4FD2526D2AA623A8009572A9 /* Info.plist */,
@@ -65,15 +65,16 @@
 				4FD252612AA623A6009572A9 /* SceneDelegate.swift */,
 				4FD2525F2AA623A6009572A9 /* AppDelegate.swift */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		4F7E55C22AA806C9002CA0D5 /* Source */ = {
+		4F7E55C22AA806C9002CA0D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4F7E55C02AA806A7002CA0D5 /* Service */,
 				4F7E55C32AA806D2002CA0D5 /* Scene */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		4F7E55C32AA806D2002CA0D5 /* Scene */ = {
@@ -132,9 +133,8 @@
 		4FD2525E2AA623A6009572A9 /* Return_iOS_CurrencyCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				4F7E55C12AA806B4002CA0D5 /* Resource */,
-				4F7E55C22AA806C9002CA0D5 /* Source */,
-				4F7E55C02AA806A7002CA0D5 /* Service */,
+				4F7E55C12AA806B4002CA0D5 /* Resources */,
+				4F7E55C22AA806C9002CA0D5 /* Sources */,
 			);
 			path = Return_iOS_CurrencyCalculator;
 			sourceTree = "<group>";
