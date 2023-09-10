@@ -210,14 +210,12 @@ class CurrencyCalculatoraViewController: UIViewController {
         remittanceAmountTextField.snp.makeConstraints {
             $0.top.equalTo(dateLabel).inset(36)
             $0.left.equalTo(remittanceAmountViewLabel).inset(140)
-            $0.right.equalToSuperview().inset(80)
+            $0.right.equalTo(remittanceAmountLabel).inset(80)
         }
-        //
         checkCurrencyButton.snp.makeConstraints {
             $0.top.equalTo(remittanceAmountViewLabel).inset(40)
             $0.left.equalToSuperview().inset(24)
         }
-        //
         calculatoraButton.snp.makeConstraints {
             $0.top.equalTo(remittanceAmountLabel).inset(161)
             $0.left.equalToSuperview().inset(130)
