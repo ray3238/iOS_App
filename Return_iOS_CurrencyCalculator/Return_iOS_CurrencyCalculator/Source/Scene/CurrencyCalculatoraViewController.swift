@@ -225,22 +225,15 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
     }
     
-    @objc func goAmountReceivedClickedButton(_ sender: UIButton) {
-        self.calculatoraButton.addTarget(self, action: #selector(self.goAmountReceived), for: .touchUpInside)
-    }
-    @objc func checkCurrencyClickedButton(_ sender: UIButton) {
-        self.checkCurrencyButton.addTarget(self, action: #selector(self.checkCurrency), for: .touchUpInside)
-    }
-    
     @objc func checkCurrency() {
         guard let fromCurrency = CurrencyCountryInfo.shared.fromCurrency,
               let toCurrency = CurrencyCountryInfo.shared.toCurrency,
               !(fromCurrency.isEmpty || toCurrency.isEmpty)
         else {
             print("class 변수 비었다")
+            showAlert(title: "오류", message: "송금국가와 수취국가, 송금액을 확인해주세요.")
             return
         }
-        
         switch toCurrency {
         case "krw":
             let provider = MoyaProvider<CurrencyCalculatorAPI>()
@@ -379,9 +372,18 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
     }
     
+    @objc func goAmountReceivedClickedButton(_ sender: UIButton) {
+        self.calculatoraButton.addTarget(self, action: #selector(self.goAmountReceived), for: .touchUpInside)
+    }
+    
+    @objc func checkCurrencyClickedButton(_ sender: UIButton) {
+        self.checkCurrencyButton.addTarget(self, action: #selector(self.checkCurrency), for: .touchUpInside)
+    }
+    
     @objc func goAmountReceived() {
         if count == 0 {
-            print("환율 확인 버튼을 눌러주세요")
+            print("'환율 확인' 버튼을 눌러주세요.")
+            showAlert(title: "오류", message: "'환율 보기' 버튼을 눌러주세요.")
         } else {
             self.navigationController?.pushViewController(AmountReceivedViewController(), animated: true)
             count = 0
@@ -439,6 +441,13 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
             print(CurrencyCountryInfo.shared.toCurrency)
         }
     }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
 
 extension CurrencyCalculatoraViewController: UITextFieldDelegate {

@@ -22,10 +22,12 @@ class AmountReceivedViewController: UIViewController {
         $0.text = "입니다."
         $0.font = UIFont.systemFont(ofSize: 18)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         setLable()
     }
@@ -36,7 +38,15 @@ class AmountReceivedViewController: UIViewController {
     }
     
     func setLable() {
-        exchangeRateViewNumberLabel.text = String(Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)!)
+        let decimalPlaces = 3 // 두 번째 자리에서 반올림하고자 함
+        
+        let multiplier = pow(10.0, Double(decimalPlaces))
+        let roundedMoney = round(Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)! * multiplier) / multiplier
+        
+//        exchangeRateViewNumberLabel.text = String(Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)!)
+        exchangeRateViewNumberLabel.text = String(roundedMoney)
+        exchangeRateViewLabel.text = "'\(CurrencyCountryInfo.shared.toCurrency!)'" + "입니다."
+        
     }
     
     func addSubView() {
@@ -49,6 +59,7 @@ class AmountReceivedViewController: UIViewController {
             view.addSubview($0)
         }
     }
+    
     func setLayout() {
         amountReceivedViewLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(104)
