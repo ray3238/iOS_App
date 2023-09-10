@@ -30,16 +30,6 @@ extension CurrencyCalculatorAPI: TargetType {
     
     var task: Moya.Task {
         return .requestPlain
-//        switch self {
-//        case .currencyCalculatorAPI(let date, let toCurrency):
-//            let params: [String: Any] =
-//            [
-//                "date": date,
-//                "\(CurrencyCountryInfo.shared.toCountry)": toCurrency
-//            ]
-//            return .requestParameters(
-//                parameters: params, encoding: URLEncoding.queryString)
-//        }
     }
     
     var headers: [String : String]? {

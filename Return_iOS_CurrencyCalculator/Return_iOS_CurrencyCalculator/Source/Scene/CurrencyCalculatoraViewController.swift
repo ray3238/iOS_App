@@ -282,30 +282,7 @@ class CurrencyCalculatoraViewController: UIViewController {
         } else {
             print("환율 확인 버튼을 눌러주세요")
         }
-//        guard let fromCurrency = CurrencyCountryInfo.shared.fromCurrency,
-//              let toCurrency = CurrencyCountryInfo.shared.toCurrency,
-              
-        
-//        let provider = MoyaProvider<CurrencyCalculatorAPI>()
-//        provider.request(.CurrencyCalculatorAPI(fromCurrency: fromCurrency, toCurrency: toCurrency)) { [self] result in
-//            switch result {
-//            case .success(_):
-//                    do {
-//                        CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
-//                        // 파싱이 제일 개가테
-//                        //                        let exchangeRate = try response.map(CurrencyCountry.self)
-////                        let exchangeRate = try response.map(CurrencyCountry.self)
-//                        print("파싱 성공! 정보 전달!")
-//                    } catch {
-//                        print("파싱 실패!")
-//                    }
-//            case .failure(_):
-//                    print("API 요청 실패!")
-//                }
-//            }
     }
-
-    
 }
 
 
