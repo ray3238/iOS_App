@@ -71,7 +71,7 @@ class CurrencyCalculatoraViewController: UIViewController {
         $0.font = UIFont.systemFont(ofSize: 18)
     }
     private let timeLabel = UILabel().then {
-        $0.text = "12:50:20"
+        $0.text = "00:00:00"
         $0.font = UIFont.systemFont(ofSize: 18)
     }
     private let remittanceAmountViewLabel = UILabel().then {
@@ -173,11 +173,11 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
         exchangeRateLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryPickerTextField).inset(41)
-            $0.left.equalTo(exchangeRateViewLabel).inset(175)
+            $0.left.equalTo(exchangeRateViewLabel).inset(120)
         }
         exchangeRemittanceLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryPickerTextField).inset(41)
-            $0.left.equalTo(exchangeRateLabel).inset(80)
+            $0.left.equalTo(exchangeRateLabel).inset(140)
         }
         slashLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryPickerTextField).inset(41)
@@ -241,71 +241,152 @@ class CurrencyCalculatoraViewController: UIViewController {
             return
         }
         
-        let provider = MoyaProvider<CurrencyCalculatorAPI>()
-        provider.request(.CurrencyAPI(fromCurrency: fromCurrency, toCurrency: toCurrency)) { res in
-            switch res {
-            case .success(let result):
-                switch result.statusCode {
-                case 200:
-                    if let data = try? JSONDecoder().decode(ExchangeRateResponse.self, from: result.data) {
-                        DispatchQueue.main.async { [self] in
-                            CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
-                            let decimalPlaces = 5 // 두 번째 자리에서 반올림하고자 함
-                            
-                            let multiplier = pow(10.0, Double(decimalPlaces))
-                            let roundedUSD = round(data.jpy * multiplier) / multiplier
-                            print("\(data.date)")
-                            print("\(roundedUSD)")
-                            CurrencyCountry.shared.currency = String(roundedUSD)
-                            
-                            exchangeRateLabel.text = CurrencyCountry.shared.currency
-                            dateLabel.text = data.date + " /"
-                            
-                            count += 1
+        switch toCurrency {
+        case "krw":
+            let provider = MoyaProvider<CurrencyCalculatorAPI>()
+            provider.request(.CurrencyAPIKrw(fromCurrency: fromCurrency, toCurrency: toCurrency)) { res in
+                switch res {
+                case .success(let result):
+                    switch result.statusCode {
+                    case 200:
+                        if let data = try? JSONDecoder().decode(ExchangeRateResponseKrw.self, from: result.data) {
+                            DispatchQueue.main.async { [self] in
+                                CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
+                                let decimalPlaces = 3 // 두 번째 자리에서 반올림하고자 함
+                                
+                                let multiplier = pow(10.0, Double(decimalPlaces))
+                                let roundedUSD = round(data.krw * multiplier) / multiplier
+                                print("\(data.date)")
+                                print("\(roundedUSD)")
+                                CurrencyCountry.shared.currency = String(roundedUSD)
+                                
+                                exchangeRateLabel.text = CurrencyCountry.shared.currency
+                                dateLabel.text = data.date + " /"
+                                
+                                count += 1
+                            }
+                        } else {
+                            print("파싱 실패!")
                         }
-                    } else {
-                        print("파싱 실패!")
+                    default:
+                        print("API 요청 실패!")
                     }
-                default:
-                    print("API 요청 실패!")
+                case .failure(let error):
+                    print("\(error.localizedDescription)")
                 }
-            case .failure(let error):
-                print("\(error.localizedDescription)")
             }
+        case "jpy":
+            let provider = MoyaProvider<CurrencyCalculatorAPI>()
+            provider.request(.CurrencyAPIJpy(fromCurrency: fromCurrency, toCurrency: toCurrency)) { res in
+                switch res {
+                case .success(let result):
+                    switch result.statusCode {
+                    case 200:
+                        if let data = try? JSONDecoder().decode(ExchangeRateResponseJpy.self, from: result.data) {
+                            DispatchQueue.main.async { [self] in
+                                CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
+                                let decimalPlaces = 3 // 두 번째 자리에서 반올림하고자 함
+                                
+                                let multiplier = pow(10.0, Double(decimalPlaces))
+                                let roundedUSD = round(data.jpy * multiplier) / multiplier
+                                print("\(data.date)")
+                                print("\(roundedUSD)")
+                                CurrencyCountry.shared.currency = String(roundedUSD)
+                                
+                                exchangeRateLabel.text = CurrencyCountry.shared.currency
+                                dateLabel.text = data.date + " /"
+                                
+                                count += 1
+                            }
+                        } else {
+                            print("파싱 실패!")
+                        }
+                    default:
+                        print("API 요청 실패!")
+                    }
+                case .failure(let error):
+                    print("\(error.localizedDescription)")
+                }
+            }
+        case "usd":
+            let provider = MoyaProvider<CurrencyCalculatorAPI>()
+            provider.request(.CurrencyAPIUsd(fromCurrency: fromCurrency, toCurrency: toCurrency)) { res in
+                switch res {
+                case .success(let result):
+                    switch result.statusCode {
+                    case 200:
+                        if let data = try? JSONDecoder().decode(ExchangeRateResponseUsd.self, from: result.data) {
+                            DispatchQueue.main.async { [self] in
+                                CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
+                                let decimalPlaces = 3 // 두 번째 자리에서 반올림하고자 함
+                                
+                                let multiplier = pow(10.0, Double(decimalPlaces))
+                                let roundedUSD = round(data.usd * multiplier) / multiplier
+                                print("\(data.date)")
+                                print("\(roundedUSD)")
+                                CurrencyCountry.shared.currency = String(roundedUSD)
+                                
+                                exchangeRateLabel.text = CurrencyCountry.shared.currency
+                                dateLabel.text = data.date + " /"
+                                
+                                count += 1
+                            }
+                        } else {
+                            print("파싱 실패!")
+                        }
+                    default:
+                        print("API 요청 실패!")
+                    }
+                case .failure(let error):
+                    print("\(error.localizedDescription)")
+                }
+            }
+        case "php":
+            let provider = MoyaProvider<CurrencyCalculatorAPI>()
+            provider.request(.CurrencyAPIPhp(fromCurrency: fromCurrency, toCurrency: toCurrency)) { res in
+                switch res {
+                case .success(let result):
+                    switch result.statusCode {
+                    case 200:
+                        if let data = try? JSONDecoder().decode(ExchangeRateResponsePhp.self, from: result.data) {
+                            DispatchQueue.main.async { [self] in
+                                CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
+                                let decimalPlaces = 3 // 두 번째 자리에서 반올림하고자 함
+                                
+                                let multiplier = pow(10.0, Double(decimalPlaces))
+                                let roundedUSD = round(data.php * multiplier) / multiplier
+                                print("\(data.date)")
+                                print("\(roundedUSD)")
+                                CurrencyCountry.shared.currency = String(roundedUSD)
+                                
+                                exchangeRateLabel.text = CurrencyCountry.shared.currency
+                                dateLabel.text = data.date + " /"
+                                
+                                count += 1
+                            }
+                        } else {
+                            print("파싱 실패!")
+                        }
+                    default:
+                        print("API 요청 실패!")
+                    }
+                case .failure(let error):
+                    print("\(error.localizedDescription)")
+                }
+            }
+        default:
+            break
         }
     }
     
     @objc func goAmountReceived() {
-        if count == 1 {
-            self.navigationController?.pushViewController(AmountReceivedViewController(), animated: true)
-            count -= 1
-        } else {
+        if count == 0 {
             print("환율 확인 버튼을 눌러주세요")
+        } else {
+            self.navigationController?.pushViewController(AmountReceivedViewController(), animated: true)
+            count = 0
         }
-//        guard let fromCurrency = CurrencyCountryInfo.shared.fromCurrency,
-//              let toCurrency = CurrencyCountryInfo.shared.toCurrency,
-              
-        
-//        let provider = MoyaProvider<CurrencyCalculatorAPI>()
-//        provider.request(.CurrencyCalculatorAPI(fromCurrency: fromCurrency, toCurrency: toCurrency)) { [self] result in
-//            switch result {
-//            case .success(_):
-//                    do {
-//                        CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
-//                        // 파싱이 제일 개가테
-//                        //                        let exchangeRate = try response.map(CurrencyCountry.self)
-////                        let exchangeRate = try response.map(CurrencyCountry.self)
-//                        print("파싱 성공! 정보 전달!")
-//                    } catch {
-//                        print("파싱 실패!")
-//                    }
-//            case .failure(_):
-//                    print("API 요청 실패!")
-//                }
-//            }
     }
-
-    
 }
 
 

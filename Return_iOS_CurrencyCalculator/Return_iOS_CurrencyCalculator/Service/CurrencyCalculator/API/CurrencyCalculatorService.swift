@@ -3,12 +3,11 @@ import Moya
 
 // 의존성이 없게 해야하는데..
 
-//임의의 변수 설정
-//let date: String = "2023-09-07"
-//
-
 enum CurrencyCalculatorAPI {
-    case CurrencyAPI(fromCurrency: String, toCurrency: String)
+    case CurrencyAPIUsd(fromCurrency: String, toCurrency: String)
+    case CurrencyAPIKrw(fromCurrency: String, toCurrency: String)
+    case CurrencyAPIJpy(fromCurrency: String, toCurrency: String)
+    case CurrencyAPIPhp(fromCurrency: String, toCurrency: String)
 }
 
 extension CurrencyCalculatorAPI: TargetType {
@@ -19,7 +18,13 @@ extension CurrencyCalculatorAPI: TargetType {
     
     var path: String {
         switch self {
-        case .CurrencyAPI(let fromCurrency, let toCurrency):
+        case .CurrencyAPIUsd(let fromCurrency, let toCurrency):
+            return "\(fromCurrency)/\(toCurrency).json"
+        case .CurrencyAPIKrw(let fromCurrency, let toCurrency):
+            return "\(fromCurrency)/\(toCurrency).json"
+        case .CurrencyAPIJpy(let fromCurrency, let toCurrency):
+            return "\(fromCurrency)/\(toCurrency).json"
+        case .CurrencyAPIPhp(let fromCurrency, let toCurrency):
             return "\(fromCurrency)/\(toCurrency).json"
         }
     }
@@ -30,16 +35,6 @@ extension CurrencyCalculatorAPI: TargetType {
     
     var task: Moya.Task {
         return .requestPlain
-//        switch self {
-//        case .currencyCalculatorAPI(let date, let toCurrency):
-//            let params: [String: Any] =
-//            [
-//                "date": date,
-//                "\(CurrencyCountryInfo.shared.toCountry)": toCurrency
-//            ]
-//            return .requestParameters(
-//                parameters: params, encoding: URLEncoding.queryString)
-//        }
     }
     
     var headers: [String : String]? {

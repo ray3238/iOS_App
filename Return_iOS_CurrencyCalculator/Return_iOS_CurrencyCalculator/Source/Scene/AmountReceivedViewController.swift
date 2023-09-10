@@ -36,11 +36,7 @@ class AmountReceivedViewController: UIViewController {
     }
     
     func setLable() {
-//        exchangeRateViewNumberLabel.text = CurrencyCountry.shared.currency
-//        let hi:Double = Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)!
         exchangeRateViewNumberLabel.text = String(Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)!)
-//        print("\(String(describing: CurrencyCountry.shared.numberData))")
-//        print("\(hi)")
     }
     
     func addSubView() {
@@ -69,7 +65,7 @@ class AmountReceivedViewController: UIViewController {
         }
         exchangeRateViewLabel.snp.makeConstraints {
             $0.top.equalTo(amountReceivedViewLabel).inset(132)
-            $0.left.equalTo(exchangeRateViewNumberLabel).inset(86)
+            $0.left.equalTo(exchangeRateViewNumberLabel).inset(150)
         }
     }
 }
