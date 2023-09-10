@@ -8,7 +8,10 @@ import Moya
 //
 
 enum CurrencyCalculatorAPI {
-    case CurrencyAPI(fromCurrency: String, toCurrency: String)
+    case CurrencyAPIUsd(fromCurrency: String, toCurrency: String)
+    case CurrencyAPIKrw(fromCurrency: String, toCurrency: String)
+    case CurrencyAPIJpy(fromCurrency: String, toCurrency: String)
+    case CurrencyAPIPhp(fromCurrency: String, toCurrency: String)
 }
 
 extension CurrencyCalculatorAPI: TargetType {
@@ -19,7 +22,13 @@ extension CurrencyCalculatorAPI: TargetType {
     
     var path: String {
         switch self {
-        case .CurrencyAPI(let fromCurrency, let toCurrency):
+        case .CurrencyAPIUsd(let fromCurrency, let toCurrency):
+            return "\(fromCurrency)/\(toCurrency).json"
+        case .CurrencyAPIKrw(let fromCurrency, let toCurrency):
+            return "\(fromCurrency)/\(toCurrency).json"
+        case .CurrencyAPIJpy(let fromCurrency, let toCurrency):
+            return "\(fromCurrency)/\(toCurrency).json"
+        case .CurrencyAPIPhp(let fromCurrency, let toCurrency):
             return "\(fromCurrency)/\(toCurrency).json"
         }
     }

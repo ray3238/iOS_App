@@ -65,7 +65,7 @@ class AmountReceivedViewController: UIViewController {
         }
         exchangeRateViewLabel.snp.makeConstraints {
             $0.top.equalTo(amountReceivedViewLabel).inset(132)
-            $0.left.equalTo(exchangeRateViewNumberLabel).inset(86)
+            $0.left.equalTo(exchangeRateViewNumberLabel).inset(150)
         }
     }
 }
