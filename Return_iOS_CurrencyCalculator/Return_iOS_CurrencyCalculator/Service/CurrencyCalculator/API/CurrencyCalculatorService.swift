@@ -3,10 +3,6 @@ import Moya
 
 // 의존성이 없게 해야하는데..
 
-//임의의 변수 설정
-//let date: String = "2023-09-07"
-//
-
 enum CurrencyCalculatorAPI {
     case CurrencyAPIUsd(fromCurrency: String, toCurrency: String)
     case CurrencyAPIKrw(fromCurrency: String, toCurrency: String)

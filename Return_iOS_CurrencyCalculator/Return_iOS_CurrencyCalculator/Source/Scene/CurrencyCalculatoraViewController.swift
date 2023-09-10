@@ -252,7 +252,7 @@ class CurrencyCalculatoraViewController: UIViewController {
                         if let data = try? JSONDecoder().decode(ExchangeRateResponseKrw.self, from: result.data) {
                             DispatchQueue.main.async { [self] in
                                 CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
-                                let decimalPlaces = 5 // 두 번째 자리에서 반올림하고자 함
+                                let decimalPlaces = 3 // 두 번째 자리에서 반올림하고자 함
                                 
                                 let multiplier = pow(10.0, Double(decimalPlaces))
                                 let roundedUSD = round(data.krw * multiplier) / multiplier
@@ -285,7 +285,7 @@ class CurrencyCalculatoraViewController: UIViewController {
                         if let data = try? JSONDecoder().decode(ExchangeRateResponseJpy.self, from: result.data) {
                             DispatchQueue.main.async { [self] in
                                 CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
-                                let decimalPlaces = 5 // 두 번째 자리에서 반올림하고자 함
+                                let decimalPlaces = 3 // 두 번째 자리에서 반올림하고자 함
                                 
                                 let multiplier = pow(10.0, Double(decimalPlaces))
                                 let roundedUSD = round(data.jpy * multiplier) / multiplier
@@ -318,7 +318,7 @@ class CurrencyCalculatoraViewController: UIViewController {
                         if let data = try? JSONDecoder().decode(ExchangeRateResponseUsd.self, from: result.data) {
                             DispatchQueue.main.async { [self] in
                                 CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
-                                let decimalPlaces = 5 // 두 번째 자리에서 반올림하고자 함
+                                let decimalPlaces = 3 // 두 번째 자리에서 반올림하고자 함
                                 
                                 let multiplier = pow(10.0, Double(decimalPlaces))
                                 let roundedUSD = round(data.usd * multiplier) / multiplier
@@ -377,39 +377,6 @@ class CurrencyCalculatoraViewController: UIViewController {
         default:
             break
         }
-        //여기서 if(of case)문으로 jpy, usd, krw, php 뭘로 환율을 받을지 선택지를 줄것임.
-        //        let provider = MoyaProvider<CurrencyCalculatorAPI>()
-        //        provider.request(.CurrencyAPI(fromCurrency: fromCurrency, toCurrency: toCurrency)) { res in
-        //            switch res {
-        //            case .success(let result):
-        //                switch result.statusCode {
-        //                case 200:
-        //                    if let data = try? JSONDecoder().decode(ExchangeRateResponse.self, from: result.data) {
-        //                        DispatchQueue.main.async { [self] in
-        //                            CurrencyCountry.shared.numberData = remittanceAmountTextField.text!
-        //                            let decimalPlaces = 5 // 두 번째 자리에서 반올림하고자 함
-        //
-        //                            let multiplier = pow(10.0, Double(decimalPlaces))
-        //                            let roundedUSD = round(data.jpy * multiplier) / multiplier
-        //                            print("\(data.date)")
-        //                            print("\(roundedUSD)")
-        //                            CurrencyCountry.shared.currency = String(roundedUSD)
-        //
-        //                            exchangeRateLabel.text = CurrencyCountry.shared.currency
-        //                            dateLabel.text = data.date + " /"
-        //
-        //                            count += 1
-        //                        }
-        //                    } else {
-        //                        print("파싱 실패!")
-        //                    }
-        //                default:
-        //                    print("API 요청 실패!")
-        //                }
-        //            case .failure(let error):
-        //                print("\(error.localizedDescription)")
-        //            }
-        //        } //
     }
     
     @objc func goAmountReceived() {
