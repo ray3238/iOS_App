@@ -42,8 +42,6 @@ class AmountReceivedViewController: UIViewController {
         
         let multiplier = pow(10.0, Double(decimalPlaces))
         let roundedMoney = round(Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)! * multiplier) / multiplier
-        
-//        exchangeRateViewNumberLabel.text = String(Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)!)
         exchangeRateViewNumberLabel.text = String(roundedMoney)
         exchangeRateViewLabel.text = "'\(CurrencyCountryInfo.shared.toCurrency!)'" + "입니다."
         
