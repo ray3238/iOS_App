@@ -42,8 +42,13 @@ class AmountReceivedViewController: UIViewController {
         
         let multiplier = pow(10.0, Double(decimalPlaces))
         let roundedMoney = round(Double(CurrencyCountry.shared.currency)! * Double(CurrencyCountry.shared.numberData)! * multiplier) / multiplier
-        exchangeRateViewNumberLabel.text = String(roundedMoney)
-        exchangeRateViewLabel.text = "'\(CurrencyCountryInfo.shared.toCurrency!)'" + "입니다."
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let result = numberFormatter.string(for: roundedMoney)!
+        
+        exchangeRateViewNumberLabel.text = String(result)
+        exchangeRateViewLabel.text = " \(CurrencyCountryInfo.shared.toCurrency?.uppercased() ?? "")" + " 입니다."
         
     }
     
@@ -61,20 +66,19 @@ class AmountReceivedViewController: UIViewController {
     func setLayout() {
         amountReceivedViewLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(104)
-            $0.left.equalToSuperview().inset(122)
-            $0.right.equalToSuperview().inset(122)
+            $0.centerX.equalToSuperview()
         }
         amountReceivedLabel.snp.makeConstraints {
-            $0.top.equalTo(amountReceivedViewLabel).inset(132)
-            $0.left.equalToSuperview().inset(48)
+            $0.top.equalTo(amountReceivedViewLabel).inset(100)
+            $0.centerX.equalToSuperview()
         }
         exchangeRateViewNumberLabel.snp.makeConstraints {
             $0.top.equalTo(amountReceivedViewLabel).inset(132)
-            $0.left.equalTo(amountReceivedLabel).inset(86)
+            $0.centerX.equalToSuperview()
         }
         exchangeRateViewLabel.snp.makeConstraints {
-            $0.top.equalTo(amountReceivedViewLabel).inset(132)
-            $0.left.equalTo(exchangeRateViewNumberLabel).inset(150)
+            $0.top.equalTo(exchangeRateViewNumberLabel).inset(32)
+            $0.centerX.equalToSuperview()
         }
     }
 }

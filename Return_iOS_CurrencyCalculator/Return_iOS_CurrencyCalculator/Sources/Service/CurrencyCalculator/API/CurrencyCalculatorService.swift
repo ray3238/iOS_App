@@ -13,7 +13,6 @@ enum CurrencyCalculatorAPI {
 extension CurrencyCalculatorAPI: TargetType {
     var baseURL: URL {
         return URL(string: "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/")!
-        
     }
     
     var path: String {

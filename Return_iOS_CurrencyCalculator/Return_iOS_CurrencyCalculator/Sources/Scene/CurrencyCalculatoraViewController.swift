@@ -11,17 +11,18 @@ class CurrencyCalculatoraViewController: UIViewController {
     
     let countries1: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
     let countries2: [String] = ["한국(KRW)", "미국(USD)", "필리핀(PHP)", "일본(JPY)"]
-    let countriesMoney1: [String] = ["krw", "usd", "php", "jpy"]
-    let countriesMoney2: [String] = ["krw", "usd", "php", "jpy"]
+    var countriesMoney1: [String] = ["krw", "usd", "php", "jpy"]
+    var countriesMoney2: [String] = ["krw", "usd", "php", "jpy"]
     
     let remittancePicker = UIPickerView()
     let recipientPicker = UIPickerView()
     
     private let countryOfRemittancePickerTextField = UITextField().then {
-        $0.text = "(나라 선택)"
+        $0.text = "한국(KRW)"
+        CurrencyCountryInfo.shared.fromCurrency = "한국(KRW)"
     }
     private let recipientCountryPickerTextField = UITextField().then {
-        $0.text = "(나라 선택)"
+        $0.text = "미국(USD)"
     }
     private let currencyCalculatoraViewLabel = UILabel().then {
         $0.text = "환율 계산"
@@ -92,6 +93,7 @@ class CurrencyCalculatoraViewController: UIViewController {
         $0.setTitle("환율 보기", for: .normal)
         $0.titleLabel!.font = UIFont.boldSystemFont(ofSize: 18)
         $0.setTitleColor(UIColor.black, for: .normal)
+        $0.layer.cornerRadius = 5
         $0.layer.borderWidth = 1
         $0.layer.borderColor = UIColor.black.cgColor
     }
@@ -99,13 +101,17 @@ class CurrencyCalculatoraViewController: UIViewController {
         $0.setTitle("환율 계산", for: .normal)
         $0.titleLabel!.font = UIFont.boldSystemFont(ofSize: 18)
         $0.setTitleColor(UIColor.black, for: .normal)
+        $0.layer.cornerRadius = 5
         $0.layer.borderWidth = 1
         $0.layer.borderColor = UIColor.black.cgColor
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        textFieldPaddingSetting()
+        pickerReset()
         textFieldSetting()
         configPickerView()
         self.calculatoraButton.addTarget(self, action: #selector(self.goAmountReceived), for: .touchUpInside)
@@ -115,6 +121,43 @@ class CurrencyCalculatoraViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         addSubView()
         setLayout()
+    }
+    
+    func textFieldPaddingSetting() {
+        remittanceAmountTextField.rightView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 5.0, height: 0.0))
+        remittanceAmountTextField.rightViewMode = .always
+    }
+    
+    func pickerReset() {
+        self.remittanceAmountLabel.text = self.countries1[0]
+        CurrencyCountryInfo.shared.fromCurrency = countriesMoney1[0]
+        self.recipientCountryPickerTextField.text = self.countries2[1]
+        CurrencyCountryInfo.shared.toCurrency = countriesMoney2[1]
+    }
+    
+    func nowTime() {
+        let currentTime = Date()
+
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute, .second], from: currentTime)
+
+        let hour = components.hour ?? 0
+        let minute = components.minute ?? 0
+        let second = components.second ?? 0
+        
+        timeLabel.text = "\(hour):\(minute):\(second)"
+        
+        
+        // 여기 밑에는 년월일을 보여주는 코드 API 자체에서 받아오고 싶으면 받아와도 됌
+        let currentDate = Date()
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd  /" // 원하는 날짜 형식으로 변경 가능
+
+        let formattedDate = dateFormatter.string(from: currentDate)
+        
+        dateLabel.text = "\(formattedDate)"
+        //
     }
     
     func addSubView() {
@@ -157,7 +200,7 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
         countryOfRemittancePickerTextField.snp.makeConstraints {
             $0.top.equalTo(currencyCalculatoraViewLabel).inset(83)
-            $0.left.equalTo(countryOfRemittanceViewLabel).inset(255)
+            $0.right.equalToSuperview().inset(24)
         }
         recipientCountryViewLabel.snp.makeConstraints {
             $0.top.equalTo(countryOfRemittanceViewLabel).inset(36)
@@ -165,7 +208,7 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
         recipientCountryPickerTextField.snp.makeConstraints {
             $0.top.equalTo(countryOfRemittancePickerTextField).inset(36)
-            $0.left.equalTo(recipientCountryViewLabel).inset(255)
+            $0.right.equalToSuperview().inset(24)
         }
         exchangeRateViewLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryViewLabel).inset(36)
@@ -173,19 +216,19 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
         exchangeRateLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryPickerTextField).inset(41)
-            $0.left.equalTo(exchangeRateViewLabel).inset(120)
+            $0.trailing.equalTo(exchangeRemittanceLabel.snp.leading).inset(-10)
         }
         exchangeRemittanceLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryPickerTextField).inset(41)
-            $0.left.equalTo(exchangeRateLabel).inset(140)
+            $0.trailing.equalToSuperview().inset(75)
         }
         slashLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryPickerTextField).inset(41)
-            $0.left.equalTo(exchangeRemittanceLabel).inset(39)
+            $0.trailing.equalToSuperview().inset(65)
         }
         exchangeRecipientLabel.snp.makeConstraints {
             $0.top.equalTo(recipientCountryPickerTextField).inset(41)
-            $0.left.equalTo(exchangeRemittanceLabel).inset(50)
+            $0.trailing.equalToSuperview().inset(24)
         }
         timeViewLabel.snp.makeConstraints {
             $0.top.equalTo(exchangeRateViewLabel).inset(36)
@@ -197,7 +240,7 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
         timeLabel.snp.makeConstraints {
             $0.top.equalTo(exchangeRateLabel).inset(36)
-            $0.left.equalTo(dateLabel).inset(120)
+            $0.right.equalToSuperview().inset(24)
         }
         remittanceAmountViewLabel.snp.makeConstraints {
             $0.top.equalTo(timeViewLabel).inset(36)
@@ -205,16 +248,17 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
         remittanceAmountLabel.snp.makeConstraints {
             $0.top.equalTo(dateLabel).inset(36)
-            $0.left.equalTo(remittanceAmountViewLabel).inset(290)
+            $0.right.equalToSuperview().inset(24)
         }
         remittanceAmountTextField.snp.makeConstraints {
             $0.top.equalTo(dateLabel).inset(36)
-            $0.left.equalTo(remittanceAmountViewLabel).inset(140)
-            $0.right.equalTo(remittanceAmountLabel).inset(80)
+            $0.left.equalTo(remittanceAmountViewLabel).inset(100)
+            $0.right.equalTo(remittanceAmountLabel).inset(95)
         }
         checkCurrencyButton.snp.makeConstraints {
             $0.top.equalTo(remittanceAmountViewLabel).inset(40)
             $0.left.equalToSuperview().inset(24)
+            $0.right.equalTo(remittanceAmountViewLabel).inset(-32)
         }
         calculatoraButton.snp.makeConstraints {
             $0.top.equalTo(remittanceAmountLabel).inset(161)
@@ -226,12 +270,14 @@ class CurrencyCalculatoraViewController: UIViewController {
     @objc func checkCurrency() {
         guard let fromCurrency = CurrencyCountryInfo.shared.fromCurrency,
               let toCurrency = CurrencyCountryInfo.shared.toCurrency,
-              !(fromCurrency.isEmpty || toCurrency.isEmpty)
+              let amountTextField = remittanceAmountTextField.text,
+              !(fromCurrency.isEmpty || toCurrency.isEmpty || amountTextField.isEmpty)
         else {
             print("class 변수 비었다")
             showAlert(title: "오류", message: "송금국가와 수취국가, 송금액을 확인해주세요.")
             return
         }
+        
         switch toCurrency {
         case "krw":
             let provider = MoyaProvider<CurrencyCalculatorAPI>()
@@ -250,9 +296,10 @@ class CurrencyCalculatoraViewController: UIViewController {
                                 print("\(data.date)")
                                 print("\(roundedUSD)")
                                 CurrencyCountry.shared.currency = String(roundedUSD)
-                                
+                                showAlert(title: "성공", message: "현재 환율은 \(CurrencyCountry.shared.currency) 입니다.")
                                 exchangeRateLabel.text = CurrencyCountry.shared.currency
                                 dateLabel.text = data.date + " /"
+                                nowTime()
                                 
                                 count += 1
                             }
@@ -283,9 +330,10 @@ class CurrencyCalculatoraViewController: UIViewController {
                                 print("\(data.date)")
                                 print("\(roundedUSD)")
                                 CurrencyCountry.shared.currency = String(roundedUSD)
-                                
+                                showAlert(title: "성공", message: "현재 환율은 \(CurrencyCountry.shared.currency) 입니다.")
                                 exchangeRateLabel.text = CurrencyCountry.shared.currency
                                 dateLabel.text = data.date + " /"
+                                nowTime()
                                 
                                 count += 1
                             }
@@ -316,9 +364,10 @@ class CurrencyCalculatoraViewController: UIViewController {
                                 print("\(data.date)")
                                 print("\(roundedUSD)")
                                 CurrencyCountry.shared.currency = String(roundedUSD)
-                                
+                                showAlert(title: "성공", message: "현재 환율은 \(CurrencyCountry.shared.currency) 입니다.")
                                 exchangeRateLabel.text = CurrencyCountry.shared.currency
                                 dateLabel.text = data.date + " /"
+                                nowTime()
                                 
                                 count += 1
                             }
@@ -349,9 +398,10 @@ class CurrencyCalculatoraViewController: UIViewController {
                                 print("\(data.date)")
                                 print("\(roundedUSD)")
                                 CurrencyCountry.shared.currency = String(roundedUSD)
-                                
+                                showAlert(title: "성공", message: "현재 환율은 \(CurrencyCountry.shared.currency) 입니다.")
                                 exchangeRateLabel.text = CurrencyCountry.shared.currency
                                 dateLabel.text = data.date + " /"
+                                nowTime()
                                 
                                 count += 1
                             }
@@ -367,6 +417,7 @@ class CurrencyCalculatoraViewController: UIViewController {
             }
         default:
             break
+            
         }
     }
     
@@ -388,7 +439,6 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
     }
 }
-
 
 // MARK: pickerViewExtension
 extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -427,12 +477,19 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
     // textfield의 텍스트에 pickerview에서 선택한 값을 넣어준다.
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == remittancePicker {
+            // 배열 요소를 대문자로 변환하고 다시 배열에 할당
+            let uppercasedString1: [String] = self.countriesMoney1.map { $0.uppercased() }
+            self.exchangeRemittanceLabel.text = uppercasedString1[row]
+            //
             self.countryOfRemittancePickerTextField.text = self.countries1[row]
             self.remittanceAmountLabel.text = self.countries1[row]
-            self.exchangeRemittanceLabel.text = self.countriesMoney1[row]
             CurrencyCountryInfo.shared.fromCurrency = countriesMoney1[row]
             print(CurrencyCountryInfo.shared.fromCurrency)
         } else if pickerView == recipientPicker {
+            // 배열 요소를 대문자로 변환하고 다시 배열에 할당
+            let uppercasedString2: [String] = self.countriesMoney2.map { $0.uppercased() }
+            self.exchangeRecipientLabel.text = uppercasedString2[row]
+            //
             self.recipientCountryPickerTextField.text = self.countries2[row]
             self.exchangeRecipientLabel.text = self.countriesMoney2[row]
             CurrencyCountryInfo.shared.toCurrency = countriesMoney2[row]
@@ -449,6 +506,7 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
 }
 
 extension CurrencyCalculatoraViewController: UITextFieldDelegate {
+    
     func textFieldSetting() {
         countryOfRemittancePickerTextField.delegate = self
         recipientCountryPickerTextField.delegate = self
@@ -459,3 +517,4 @@ extension CurrencyCalculatoraViewController: UITextFieldDelegate {
             return false
     }
 }
+
