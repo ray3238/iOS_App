@@ -29,7 +29,7 @@ extension CurrencyCalculatorAPI: TargetType {
     }
     
     var method: Moya.Method {
-            return .get
+        return .get
     }
     
     var task: Moya.Task {
@@ -40,4 +40,4 @@ extension CurrencyCalculatorAPI: TargetType {
         return nil
     }
 }
-        
+

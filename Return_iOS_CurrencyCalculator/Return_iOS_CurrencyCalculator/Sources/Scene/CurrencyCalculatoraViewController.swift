@@ -110,12 +110,14 @@ class CurrencyCalculatoraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.calculatoraButton.addTarget(self, action: #selector(self.goAmountReceived), for: .touchUpInside)
+        self.checkCurrencyButton.addTarget(self, action: #selector(self.checkCurrency), for: .touchUpInside)
+        self.remittanceAmountTextField.delegate = self
+        navigationBarCustom()
         textFieldPaddingSetting()
         pickerReset()
         textFieldSetting()
         configPickerView()
-        self.calculatoraButton.addTarget(self, action: #selector(self.goAmountReceived), for: .touchUpInside)
-        self.checkCurrencyButton.addTarget(self, action: #selector(self.checkCurrency), for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -137,10 +139,10 @@ class CurrencyCalculatoraViewController: UIViewController {
     
     func nowTime() {
         let currentTime = Date()
-
+        
         let calendar = Calendar.current
         let components = calendar.dateComponents([.hour, .minute, .second], from: currentTime)
-
+        
         let hour = components.hour ?? 0
         let minute = components.minute ?? 0
         let second = components.second ?? 0
@@ -150,14 +152,20 @@ class CurrencyCalculatoraViewController: UIViewController {
         
         // 여기 밑에는 년월일을 보여주는 코드 API 자체에서 받아오고 싶으면 받아와도 됌
         let currentDate = Date()
-
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd  /" // 원하는 날짜 형식으로 변경 가능
-
+        
         let formattedDate = dateFormatter.string(from: currentDate)
         
         dateLabel.text = "\(formattedDate)"
         //
+    }
+    
+    func navigationBarCustom() {
+        let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
+        backBarButtonItem.tintColor = .black  // 색상 변경
+        self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     
     func addSubView() {
@@ -236,7 +244,7 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
         dateLabel.snp.makeConstraints {
             $0.top.equalTo(exchangeRateLabel).inset(36)
-            $0.left.equalTo(timeViewLabel).inset(150)
+            $0.right.equalTo(timeLabel).inset(80)
         }
         timeLabel.snp.makeConstraints {
             $0.top.equalTo(exchangeRateLabel).inset(36)
@@ -252,7 +260,8 @@ class CurrencyCalculatoraViewController: UIViewController {
         }
         remittanceAmountTextField.snp.makeConstraints {
             $0.top.equalTo(dateLabel).inset(36)
-            $0.left.equalTo(remittanceAmountViewLabel).inset(100)
+
+            $0.width.equalTo(200)
             $0.right.equalTo(remittanceAmountLabel).inset(95)
         }
         checkCurrencyButton.snp.makeConstraints {
@@ -434,7 +443,10 @@ class CurrencyCalculatoraViewController: UIViewController {
             print("'환율 확인' 버튼을 눌러주세요.")
             showAlert(title: "오류", message: "'환율 보기' 버튼을 눌러주세요.")
         } else {
-            self.navigationController?.pushViewController(AmountReceivedViewController(), animated: true)
+//            self.navigationController?.pushViewController(AmountReceivedViewController(), animated: true)
+            self.definesPresentationContext = true
+            AmountReceivedViewController().modalPresentationStyle = .fullScreen
+            self.present(AmountReceivedViewController(), animated: true, completion: nil)
             count = 0
         }
     }
@@ -507,14 +519,25 @@ extension CurrencyCalculatoraViewController: UIPickerViewDelegate, UIPickerViewD
 
 extension CurrencyCalculatoraViewController: UITextFieldDelegate {
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        if allowedCharacters.isSuperset(of: characterSet) == false {
+            showAlert(title: "오류", message: "송금액에는 숫자만 입력해주세요.")
+            return false
+        }
+        return true
+    }
+    
     func textFieldSetting() {
         countryOfRemittancePickerTextField.delegate = self
         recipientCountryPickerTextField.delegate = self
         countryOfRemittancePickerTextField.tintColor = .clear
         recipientCountryPickerTextField.tintColor = .clear
     }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            return false
-    }
+    //    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    //            return false
+    //    }
 }
 

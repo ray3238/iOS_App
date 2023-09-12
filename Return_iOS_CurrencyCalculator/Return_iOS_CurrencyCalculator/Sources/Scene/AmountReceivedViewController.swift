@@ -2,7 +2,6 @@ import UIKit
 import SnapKit
 import Then
 import Moya
-import DropDown
 
 class AmountReceivedViewController: UIViewController {
     
@@ -26,12 +25,14 @@ class AmountReceivedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setLable()
+        view.backgroundColor = .white
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        setLable()
-    }
-
+//    override func viewDidAppear(_ animated: Bool) {
+//        setLable()
+//    }
+    
     override func viewDidLayoutSubviews() {
         addSubView()
         setLayout()
