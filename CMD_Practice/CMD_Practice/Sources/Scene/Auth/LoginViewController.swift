@@ -37,9 +37,41 @@ class LoginViewController: UIViewController {
         $0.setTitle("회원가입", for: .normal)
         $0.backgroundColor = .white
     }
+    private let findPWLabel = UILabel().then {
+        $0.text = "비밀번호를 까먹으셨나요?"
+        $0.textColor = .black
+        $0.font = UIFont.systemFont(ofSize: 12)
+    }
+    private let findPWClickedBtn = UIButton().then {
+        $0.setTitle("비밀번호찾기", for: .normal)
+        $0.setTitleColor(.lightGray, for: .normal)
+        $0.titleLabel!.font = UIFont.systemFont(ofSize: 12)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
+    
+    func addSubview() {
+        [
+            loginLabel,
+            idTextField,
+            pwTextField,
+            userNameTextField,
+            loginButton,
+            goSignup,
+            goSignupButton,
+            findPWLabel,
+            findPWClickedBtn
+        ].forEach {
+            view.addSubview($0);
+        }
+        
+    }
+    
+    func autoLayout() {
+        
+    }
 }

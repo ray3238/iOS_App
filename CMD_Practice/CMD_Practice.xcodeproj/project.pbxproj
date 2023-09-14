@@ -75,11 +75,6 @@
 			children = (
 				4FD2521D2AA1CECB009572A9 /* Resources */,
 				4FD2521C2AA1CEA7009572A9 /* Sources */,
-				4FD252082AA1C9E3009572A9 /* AppDelegate.swift */,
-				4FD2520A2AA1C9E3009572A9 /* SceneDelegate.swift */,
-				4FD252112AA1C9E4009572A9 /* Assets.xcassets */,
-				4FD252132AA1C9E4009572A9 /* LaunchScreen.storyboard */,
-				4FD252162AA1C9E4009572A9 /* Info.plist */,
 			);
 			path = CMD_Practice;
 			sourceTree = "<group>";
@@ -97,6 +92,11 @@
 		4FD2521D2AA1CECB009572A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4FD252162AA1C9E4009572A9 /* Info.plist */,
+				4FD252112AA1C9E4009572A9 /* Assets.xcassets */,
+				4FD252132AA1C9E4009572A9 /* LaunchScreen.storyboard */,
+				4FD2520A2AA1C9E3009572A9 /* SceneDelegate.swift */,
+				4FD252082AA1C9E3009572A9 /* AppDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
