@@ -72,6 +72,9 @@ class LoginViewController: UIViewController {
     }
     
     func autoLayout() {
-        
+        loginLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(110)
+            $0.left.equalToSuperview().inset(50)
+        }
     }
 }
