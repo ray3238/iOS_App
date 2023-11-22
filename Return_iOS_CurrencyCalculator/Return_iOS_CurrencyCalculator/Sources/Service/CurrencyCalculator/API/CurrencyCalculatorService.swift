@@ -17,7 +17,8 @@ extension CurrencyCalculatorAPI: TargetType {
     
     var path: String {
         switch self {
-        case .CurrencyAPIUsd(let fromCurrency, let toCurrency):
+        case .CurrencyAPIUsd(let fromCurrency, let
+                             toCurrency):
             return "\(fromCurrency)/\(toCurrency).json"
         case .CurrencyAPIKrw(let fromCurrency, let toCurrency):
             return "\(fromCurrency)/\(toCurrency).json"

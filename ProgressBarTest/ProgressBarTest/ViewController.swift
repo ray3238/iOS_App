@@ -22,15 +22,22 @@ class ViewController: UIViewController {
         $0.setTitle("게이지", for: .normal)
     }
     
+    private let label = UILabel().then {
+        $0.text = "60%"
+        $0.textColor = .black
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 프로그래스 바를 추가합니다.
-        progressBar.progressTintColor = .systemPink
+        progressBar.progressTintColor = .yellow
         progressBar.trackTintColor = .systemGray6
         view.addSubview(textLabel)
         view.addSubview(progressBar)
         view.addSubview(textField)
         view.addSubview(button)
+        view.addSubview(label)
         
         self.button.addTarget(self, action: #selector(self.progressBarClear), for: .touchUpInside)
         
@@ -51,6 +58,10 @@ class ViewController: UIViewController {
         button.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(50) // 세로 위치 조절
+        }
+        label.snp.makeConstraints {
+            $0.top.equalTo(progressBar).inset(10)
+            $0.centerX.equalTo(progressBar)
         }
         
         // ProgressBar의 끝 부분을 둥글게 설정
@@ -77,6 +88,7 @@ class ViewController: UIViewController {
         if let text = textField.text, let percentage = Float(text) {
             // 원하는 진행률(0.0에서 1.0 사이)로 ProgressBar를 업데이트합니다.
             textLabel.text = "궁합률 \(String(percentage))%!"
+            label.text = "\(String(percentage))%"
             updateProgress(percentage: percentage / 100.0)
         }
     }

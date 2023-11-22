@@ -338,6 +338,7 @@ class CurrencyCalculatoraViewController: UIViewController {
                                 let roundedUSD = round(data.jpy * multiplier) / multiplier
                                 print("\(data.date)")
                                 print("\(roundedUSD)")
+                                
                                 CurrencyCountry.shared.currency = String(roundedUSD)
                                 showAlert(title: "성공", message: "현재 환율은 \(CurrencyCountry.shared.currency) 입니다.")
                                 exchangeRateLabel.text = CurrencyCountry.shared.currency
