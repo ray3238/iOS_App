@@ -1,0 +1,6 @@
+framework module Pods_rxswift_practice {
+  umbrella header "Pods-rxswift practice-umbrella.h"
+
+  export *
+  module * { export * }
+}
