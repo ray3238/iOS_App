@@ -1,0 +1,6 @@
+framework module Pods_ImagePickerPracticeForAster {
+  umbrella header "Pods-ImagePickerPracticeForAster-umbrella.h"
+
+  export *
+  module * { export * }
+}
