@@ -1,0 +1,6 @@
+framework module Pods_CoordinatorPattern {
+  umbrella header "Pods-CoordinatorPattern-umbrella.h"
+
+  export *
+  module * { export * }
+}
