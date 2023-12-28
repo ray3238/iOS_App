@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F09931C2AC6D09B00CFF3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F09931B2AC6D09B00CFF3E2 /* AppDelegate.swift */; };
+		4F09931E2AC6D09B00CFF3E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F09931D2AC6D09B00CFF3E2 /* SceneDelegate.swift */; };
+		4F0993252AC6D09C00CFF3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0993242AC6D09C00CFF3E2 /* Assets.xcassets */; };
+		4F0993302AC6D7AF00CFF3E2 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F09932F2AC6D7AF00CFF3E2 /* SignupVC.swift */; };
+		4F1615AA2AD587C400FDEE07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0993262AC6D09C00CFF3E2 /* LaunchScreen.storyboard */; };
+		4F1615B22AD5938F00FDEE07 /* Gwangyang Sunshine Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1615B02AD5938F00FDEE07 /* Gwangyang Sunshine Regular.otf */; };
+		4F1615B32AD5938F00FDEE07 /* Gwangyang Sunshine Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F1615B12AD5938F00FDEE07 /* Gwangyang Sunshine Bold.otf */; };
+		4FC3A3272AD6AB200083EE2A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC3A3262AD6AB200083EE2A /* Coordinator.swift */; };
+		4FC3A32A2AD6B0390083EE2A /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC3A3292AD6B0390083EE2A /* Article.swift */; };
+		4FC3A32D2AD6B4570083EE2A /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC3A32C2AD6B4570083EE2A /* ArticleService.swift */; };
+		A58C1EAD85B447B857E9A537 /* Pods_ASTER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E2E851D573E87D3D2E0480 /* Pods_ASTER.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		055D4E59F1B70AF9711BFE5B /* Pods-ASTER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASTER.release.xcconfig"; path = "Target Support Files/Pods-ASTER/Pods-ASTER.release.xcconfig"; sourceTree = "<group>"; };
+		06E2E851D573E87D3D2E0480 /* Pods_ASTER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASTER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F0993182AC6D09B00CFF3E2 /* ASTER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASTER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F09931B2AC6D09B00CFF3E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F09931D2AC6D09B00CFF3E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4F0993242AC6D09C00CFF3E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F0993272AC6D09C00CFF3E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F0993292AC6D09C00CFF3E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F09932F2AC6D7AF00CFF3E2 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		4F1615B02AD5938F00FDEE07 /* Gwangyang Sunshine Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gwangyang Sunshine Regular.otf"; sourceTree = "<group>"; };
+		4F1615B12AD5938F00FDEE07 /* Gwangyang Sunshine Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gwangyang Sunshine Bold.otf"; sourceTree = "<group>"; };
+		4FC3A3262AD6AB200083EE2A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4FC3A3292AD6B0390083EE2A /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		4FC3A32C2AD6B4570083EE2A /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
+		9005A68307507F19B225B96C /* Pods-ASTER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASTER.debug.xcconfig"; path = "Target Support Files/Pods-ASTER/Pods-ASTER.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F0993152AC6D09B00CFF3E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58C1EAD85B447B857E9A537 /* Pods_ASTER.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F09930F2AC6D09B00CFF3E2 = {
+			isa = PBXGroup;
+			children = (
+				4F09931A2AC6D09B00CFF3E2 /* ASTER_Practice */,
+				4F0993192AC6D09B00CFF3E2 /* Products */,
+				8C24AA4B18B6EBC4A1D1DE6A /* Pods */,
+				DF6B1AA1750CA50A52EDF8E7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4F0993192AC6D09B00CFF3E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F0993182AC6D09B00CFF3E2 /* ASTER.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F09931A2AC6D09B00CFF3E2 /* ASTER_Practice */ = {
+			isa = PBXGroup;
+			children = (
+				4FC3A32B2AD6B4340083EE2A /* Services */,
+				4F1615AB2AD5932100FDEE07 /* Resourse */,
+				4F0993312AC6D7FF00CFF3E2 /* Controllers */,
+				4FC3A3282AD6AFD90083EE2A /* Models */,
+				4FC3A3262AD6AB200083EE2A /* Coordinator.swift */,
+			);
+			path = ASTER_Practice;
+			sourceTree = "<group>";
+		};
+		4F0993312AC6D7FF00CFF3E2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F0993322AC6D81800CFF3E2 /* Auth */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4F0993322AC6D81800CFF3E2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				4F09932F2AC6D7AF00CFF3E2 /* SignupVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		4F1615AB2AD5932100FDEE07 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				4F1615AE2AD5934500FDEE07 /* Font */,
+				4F09931D2AC6D09B00CFF3E2 /* SceneDelegate.swift */,
+				4F09931B2AC6D09B00CFF3E2 /* AppDelegate.swift */,
+				4F0993262AC6D09C00CFF3E2 /* LaunchScreen.storyboard */,
+				4F0993242AC6D09C00CFF3E2 /* Assets.xcassets */,
+				4F0993292AC6D09C00CFF3E2 /* Info.plist */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		4F1615AE2AD5934500FDEE07 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4F1615B02AD5938F00FDEE07 /* Gwangyang Sunshine Regular.otf */,
+				4F1615B12AD5938F00FDEE07 /* Gwangyang Sunshine Bold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		4FC3A3282AD6AFD90083EE2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4FC3A3292AD6B0390083EE2A /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4FC3A32B2AD6B4340083EE2A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4FC3A32C2AD6B4570083EE2A /* ArticleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8C24AA4B18B6EBC4A1D1DE6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9005A68307507F19B225B96C /* Pods-ASTER.debug.xcconfig */,
+				055D4E59F1B70AF9711BFE5B /* Pods-ASTER.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DF6B1AA1750CA50A52EDF8E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06E2E851D573E87D3D2E0480 /* Pods_ASTER.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F0993172AC6D09B00CFF3E2 /* ASTER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F09932C2AC6D09C00CFF3E2 /* Build configuration list for PBXNativeTarget "ASTER" */;
+			buildPhases = (
+				4D4F6AFE28536E2021D93148 /* [CP] Check Pods Manifest.lock */,
+				4F0993142AC6D09B00CFF3E2 /* Sources */,
+				4F0993152AC6D09B00CFF3E2 /* Frameworks */,
+				4F0993162AC6D09B00CFF3E2 /* Resources */,
+				FF00420E1876399617F29249 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASTER;
+			productName = ASTER;
+			productReference = 4F0993182AC6D09B00CFF3E2 /* ASTER.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F0993102AC6D09B00CFF3E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4F0993172AC6D09B00CFF3E2 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 4F0993132AC6D09B00CFF3E2 /* Build configuration list for PBXProject "ASTER_Practice" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F09930F2AC6D09B00CFF3E2;
+			productRefGroup = 4F0993192AC6D09B00CFF3E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F0993172AC6D09B00CFF3E2 /* ASTER */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F0993162AC6D09B00CFF3E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0993252AC6D09C00CFF3E2 /* Assets.xcassets in Resources */,
+				4F1615B32AD5938F00FDEE07 /* Gwangyang Sunshine Bold.otf in Resources */,
+				4F1615B22AD5938F00FDEE07 /* Gwangyang Sunshine Regular.otf in Resources */,
+				4F1615AA2AD587C400FDEE07 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D4F6AFE28536E2021D93148 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ASTER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF00420E1876399617F29249 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ASTER/Pods-ASTER-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ASTER/Pods-ASTER-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ASTER/Pods-ASTER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F0993142AC6D09B00CFF3E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FC3A3272AD6AB200083EE2A /* Coordinator.swift in Sources */,
+				4F0993302AC6D7AF00CFF3E2 /* SignupVC.swift in Sources */,
+				4FC3A32D2AD6B4570083EE2A /* ArticleService.swift in Sources */,
+				4F09931C2AC6D09B00CFF3E2 /* AppDelegate.swift in Sources */,
+				4F09931E2AC6D09B00CFF3E2 /* SceneDelegate.swift in Sources */,
+				4FC3A32A2AD6B0390083EE2A /* Article.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4F0993262AC6D09C00CFF3E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F0993272AC6D09C00CFF3E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F09932A2AC6D09C00CFF3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F09932B2AC6D09C00CFF3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F09932D2AC6D09C00CFF3E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9005A68307507F19B225B96C /* Pods-ASTER.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ASTER_Practice/Resourse/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aa.ASTER-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F09932E2AC6D09C00CFF3E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 055D4E59F1B70AF9711BFE5B /* Pods-ASTER.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ASTER_Practice/Resourse/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aa.ASTER-Practice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F0993132AC6D09B00CFF3E2 /* Build configuration list for PBXProject "ASTER_Practice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F09932A2AC6D09C00CFF3E2 /* Debug */,
+				4F09932B2AC6D09C00CFF3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F09932C2AC6D09C00CFF3E2 /* Build configuration list for PBXNativeTarget "ASTER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F09932D2AC6D09C00CFF3E2 /* Debug */,
+				4F09932E2AC6D09C00CFF3E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F0993102AC6D09B00CFF3E2 /* Project object */;
+}
