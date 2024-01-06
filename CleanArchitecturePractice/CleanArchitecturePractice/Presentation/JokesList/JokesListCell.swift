@@ -56,7 +56,7 @@ class JokesListCell: UITableViewCell {
     func setCell(jokesList: JokesListEntities) {
         questionLabel.text = jokesList.question
         answerLabel.text = jokesList.answer
-    }
+    }.  
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
