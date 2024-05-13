@@ -1,11 +1,23 @@
-//
-//  ViewController.swift
-//  ClickerGame
-//
-//  Created by 이태규 on 2023/04/11.
-//
-
 import UIKit
+
+
+
+//MARK:  어떤식이냐.
+//MARK:  APi 연동으로 값을 가져와.
+//MARK:  연동한 값을 어디 저장할 수 있는 곳에 append로 뒤부터 저장해
+//MARK:  어디선가 불러와서 cell에 정보를 넣어
+//MARK:  이럼 끝인데..
+//MARK:  어떻게 하지..
+
+struct aaList {
+    var aList: [aa]
+}
+
+struct aa {
+    var a: Int = 1
+    var b: Int = 2
+    var c: Int = 3
+}
 
 class ViewController: UIViewController {
     var status: Bool = false

@@ -9,7 +9,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         toDoListTableView.dataSource = self
         toDoListTableView.delegate = self
-        toDoListTableView.estimatedSectionHeaderHeight = 0
+//        toDoListTableView.estimatedSectionHeaderHeight = 0
     }
 
     override func viewDidAppear(_ animated: Bool) {

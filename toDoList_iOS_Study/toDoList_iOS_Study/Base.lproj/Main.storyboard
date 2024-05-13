@@ -68,10 +68,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R6s-f9-IWe">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="lhx-Oz-tc2">
-                            <connections>
-                                <segue destination="Dbc-v8-s3x" kind="push" id="cmG-X9-bjF"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fpY-Ic-EOE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="k8j-Yr-neP">
+                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                <connections>
+                                    <segue destination="Dbc-v8-s3x" kind="push" id="Jzh-ML-2Bx"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

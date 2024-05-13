@@ -1,0 +1,6 @@
+framework module Pods_dms_________ {
+  umbrella header "Pods-dms 멘토링-umbrella.h"
+
+  export *
+  module * { export * }
+}
