@@ -3,7 +3,6 @@ import SnapKit
 import Then
 
 class ScrollViewController: UIViewController {
-
     let scrollView = UIScrollView()
     let contentView = UIView()
     let labelOne = UILabel().then {
@@ -89,6 +88,4 @@ class ScrollViewController: UIViewController {
             $0.centerX.equalToSuperview()
         }
     }
-
 }
-
