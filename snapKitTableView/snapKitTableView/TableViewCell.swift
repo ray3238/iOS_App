@@ -9,9 +9,9 @@ import UIKit
 import SnapKit
 import Then
 
-class ViewControllerCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
     
-    let identifier = "ViewControllerCell"
+    let identifier = "TableViewCell"
     
     let label = UILabel().then {
         $0.text = "안녕"
