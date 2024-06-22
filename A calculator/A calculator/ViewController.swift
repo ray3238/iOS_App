@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             number1.text = number.text
             number.text = "0"
         case 1:
-            number.text = String(Int(number.text!)! * -1)
+            number.text = String(Double(number.text!)! * -1)
         case 2:
             typeNum = sender.tag
             firstNumber = Double(number.text!)!
@@ -83,3 +83,4 @@ class ViewController: UIViewController {
     
     
 }
+// 아니 이거 왜 새로운 파일 채인지 안떠
